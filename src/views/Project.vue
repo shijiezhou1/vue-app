@@ -1,13 +1,20 @@
 <template>
     <div class="project">
         <h1>Project:</h1>
-        <img src="https://janikvonrotz.ch/images/Surveillance%20Berlin/1_Banner.jpg" alt="test" />
+        <BlogCard></BlogCard>
     </div>
 </template>
 
-<script></script>
+<script>
+    import BlogCard from '../components/BlogCard.vue';
+    export default {
+        components:{
+            BlogCard: BlogCard
+        }
+    }
+</script>
 
-<style lang="scss">
+<style lang="scss" scoped="scoped">
 .project {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
