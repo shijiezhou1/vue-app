@@ -1,27 +1,27 @@
 <template>
-    <div class="project">
+    <div id="project">
         <h1>Project:</h1>
         <BlogCard></BlogCard>
     </div>
 </template>
 
 <script>
-    import BlogCard from '../components/BlogCard.vue';
-    export default {
-        components:{
-            BlogCard: BlogCard
-        }
+import BlogCard from '../components/BlogCard.vue';
+export default {
+    components: {
+        BlogCard: BlogCard
     }
+};
 </script>
 
 <style lang="scss" scoped="scoped">
-.project {
+#project {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-   
+
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) {
         & img {

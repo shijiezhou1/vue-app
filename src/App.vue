@@ -30,7 +30,7 @@ export default {
                             {
                                 type: 'link',
                                 text: 'Customer Service',
-                                path: './customer-service',
+                                path: './project',
                                 iconLeft: '<i class="fa fa-user fa-fw"></i>'
                             },
                             {
@@ -84,11 +84,13 @@ export default {
                     },
                     {
                         type: 'link',
-                        text: 'CV'
+                        text: 'CV',
+                        path: './cv'
                     },
                     {
                         type: 'link',
-                        text: 'Contact'
+                        text: 'Contact',
+                        path: './contact'
                     }
                 ]
                 // menuOptionsRight: [
@@ -122,18 +124,6 @@ export default {
 <style lang="scss" scoped="scoped">
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
-html {
-    width: 100%;
-    font-size: 18px;
-    color: #333;
-}
-body {
-    margin: 0;
-    height: 100%;
-    height: 100vh;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-}
 #app {
     height: 100%;
     height: 100vh;
@@ -157,6 +147,7 @@ body {
 
 .main-navbar-section {
     background: #fff;
+    box-shadow: 0 1px #0000002e;
 }
 .vnb {
     font-family: 'Montserrat', sans-serif;
