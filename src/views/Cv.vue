@@ -1,18 +1,17 @@
 <template>
     <div>
-        <iframe :src="url" frameborder="0" width="100%" height="560"></iframe>
+        <pdf src="./pdf/resume.pdf" :page="page" ref="myPdfComponent"></pdf>
     </div>
 </template>
 
 <script>
+import pdf from 'vue-pdf';
+
 export default {
-    data() {
-        return {
-            url: "../static/pdf/resume.pdf"
-        };
+    components: {
+        pdf
     }
 };
 </script>
 
-<style>
-</style>
+<style></style>
