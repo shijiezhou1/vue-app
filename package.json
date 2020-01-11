@@ -13,8 +13,8 @@
     "pdfvuer": "^1.4.0",
     "vue": "^2.6.10",
     "vue-navigation-bar": "^2.0.0",
-    "vue-pdf": "^4.0.7",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
