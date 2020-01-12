@@ -1,173 +1,502 @@
 <template>
-    <div id="main">
-        <div>
-            <isotope :list="list" id="root_isotope" class="isoDefault" :options="getOptions()" @filter="filterOption=arguments[0]" @sort="sortOption=arguments[0]">
-                <div v-for="element in list" @click="selected = element" :key="element.id" >
-                    {{ element.name }}
-                    <br />
-                    {{ element.id }}
-                </div>
-            </isotope>
-        </div>
 
-        <div id="change">
-            <button @click="add">Add</button>
-            <button @click="replace">Replace</button>
-            <button @click="remove">Remove</button>
-        </div>
+  <div>
+    <h1>Isotope - sorting, vanilla JS</h1>
 
-        <div id="filter">
-            <div>
-                <input type="text" v-model="filterText" placeholder="no filter" />
-                <button :class="[filterOption === 'filterByText' ? 'is-checked' : '']" @click="filter('filterByText')">Filter</button>
-            </div>
-            <button :class="[filterOption === 'isEven' ? 'is-checked' : '']" @click="filter('isEven')">Filter Even</button>
-            <button :class="[filterOption === 'isOdd' ? 'is-checked' : '']" @click="filter('isOdd')">Filter Odd</button>
-            <button @click="filter()">Unfilter</button>
-        </div>
-        <div id="sort">
-            <button :class="[sortOption === 'name' ? 'is-checked' : '']" @click="sort('name')">Sort by name</button>
-            <button :class="[sortOption === 'id' ? 'is-checked' : '']" @click="sort('id')">Sort by id</button>
-            <button @click="shuttle">Shuttle</button>
-        </div>
-
-        <div>
-            <div v-if="selected" class="item">
-                <input type="text" name="" v-model="selected.name" />
-                <br />
-                <input type="text" name="" v-model="selected.id" />
-            </div>
-        </div>
+    <div class="button-group sort-by-button-group">
+      <button
+        class="button is-checked"
+        data-sort-value="original-order"
+      >original order</button>
+      <button
+        class="button"
+        data-sort-value="name"
+      >name</button>
+      <button
+        class="button"
+        data-sort-value="symbol"
+      >symbol</button>
+      <button
+        class="button"
+        data-sort-value="number"
+      >number</button>
+      <button
+        class="button"
+        data-sort-value="weight"
+      >weight</button>
+      <button
+        class="button"
+        data-sort-value="category"
+      >category</button>
     </div>
+
+    <div class="button-group filters-button-group">
+      <button
+        class="button is-checked"
+        data-filter="*"
+      >show all</button>
+      <button
+        class="button"
+        data-filter=".metal"
+      >metal</button>
+      <button
+        class="button"
+        data-filter=".transition"
+      >transition</button>
+      <button
+        class="button"
+        data-filter=".alkali, .alkaline-earth"
+      >alkali and alkaline-earth</button>
+      <button
+        class="button"
+        data-filter=":not(.transition)"
+      >not transition</button>
+      <button
+        class="button"
+        data-filter=".metal:not(.transition)"
+      >metal but not transition</button>
+      <button
+        class="button"
+        data-filter="numberGreaterThan50"
+      >number > 50</button>
+      <button
+        class="button"
+        data-filter="ium"
+      >name ends with &ndash;ium</button>
+    </div>
+
+    <div class="grid">
+      <div
+        class="element-item transition metal "
+        data-category="transition"
+      >
+        <h3 class="name">Mercury</h3>
+        <p class="symbol">Hg</p>
+        <p class="number">80</p>
+        <p class="weight">200.59</p>
+      </div>
+      <div
+        class="element-item metalloid "
+        data-category="metalloid"
+      >
+        <h3 class="name">Tellurium</h3>
+        <p class="symbol">Te</p>
+        <p class="number">52</p>
+        <p class="weight">127.6</p>
+      </div>
+      <div
+        class="element-item post-transition metal "
+        data-category="post-transition"
+      >
+        <h3 class="name">Bismuth</h3>
+        <p class="symbol">Bi</p>
+        <p class="number">83</p>
+        <p class="weight">208.980</p>
+      </div>
+      <div
+        class="element-item post-transition metal "
+        data-category="post-transition"
+      >
+        <h3 class="name">Lead</h3>
+        <p class="symbol">Pb</p>
+        <p class="number">82</p>
+        <p class="weight">207.2</p>
+      </div>
+      <div
+        class="element-item transition metal "
+        data-category="transition"
+      >
+        <h3 class="name">Gold</h3>
+        <p class="symbol">Au</p>
+        <p class="number">79</p>
+        <p class="weight">196.967</p>
+      </div>
+      <div
+        class="element-item alkali metal "
+        data-category="alkali"
+      >
+        <h3 class="name">Potassium</h3>
+        <p class="symbol">K</p>
+        <p class="number">19</p>
+        <p class="weight">39.0983</p>
+      </div>
+      <div
+        class="element-item alkali metal "
+        data-category="alkali"
+      >
+        <h3 class="name">Sodium</h3>
+        <p class="symbol">Na</p>
+        <p class="number">11</p>
+        <p class="weight">22.99</p>
+      </div>
+      <div
+        class="element-item transition metal "
+        data-category="transition"
+      >
+        <h3 class="name">Cadmium</h3>
+        <p class="symbol">Cd</p>
+        <p class="number">48</p>
+        <p class="weight">112.411</p>
+      </div>
+      <div
+        class="element-item alkaline-earth metal "
+        data-category="alkaline-earth"
+      >
+        <h3 class="name">Calcium</h3>
+        <p class="symbol">Ca</p>
+        <p class="number">20</p>
+        <p class="weight">40.078</p>
+      </div>
+      <div
+        class="element-item transition metal "
+        data-category="transition"
+      >
+        <h3 class="name">Rhenium</h3>
+        <p class="symbol">Re</p>
+        <p class="number">75</p>
+        <p class="weight">186.207</p>
+      </div>
+      <div
+        class="element-item post-transition metal "
+        data-category="post-transition"
+      >
+        <h3 class="name">Thallium</h3>
+        <p class="symbol">Tl</p>
+        <p class="number">81</p>
+        <p class="weight">204.383</p>
+      </div>
+      <div
+        class="element-item metalloid "
+        data-category="metalloid"
+      >
+        <h3 class="name">Antimony</h3>
+        <p class="symbol">Sb</p>
+        <p class="number">51</p>
+        <p class="weight">121.76</p>
+      </div>
+      <div
+        class="element-item transition metal "
+        data-category="transition"
+      >
+        <h3 class="name">Cobalt</h3>
+        <p class="symbol">Co</p>
+        <p class="number">27</p>
+        <p class="weight">58.933</p>
+      </div>
+      <div
+        class="element-item lanthanoid metal inner-transition "
+        data-category="lanthanoid"
+      >
+        <h3 class="name">Ytterbium</h3>
+        <p class="symbol">Yb</p>
+        <p class="number">70</p>
+        <p class="weight">173.054</p>
+      </div>
+      <div
+        class="element-item noble-gas nonmetal "
+        data-category="noble-gas"
+      >
+        <h3 class="name">Argon</h3>
+        <p class="symbol">Ar</p>
+        <p class="number">18</p>
+        <p class="weight">39.948</p>
+      </div>
+      <div
+        class="element-item diatomic nonmetal "
+        data-category="diatomic"
+      >
+        <h3 class="name">Nitrogen</h3>
+        <p class="symbol">N</p>
+        <p class="number">7</p>
+        <p class="weight">14.007</p>
+      </div>
+      <div
+        class="element-item actinoid metal inner-transition "
+        data-category="actinoid"
+      >
+        <h3 class="name">Uranium</h3>
+        <p class="symbol">U</p>
+        <p class="number">92</p>
+        <p class="weight">238.029</p>
+      </div>
+      <div
+        class="element-item actinoid metal inner-transition "
+        data-category="actinoid"
+      >
+        <h3 class="name">Plutonium</h3>
+        <p class="symbol">Pu</p>
+        <p class="number">94</p>
+        <p class="weight">(244)</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-import isotope from 'vueisotope';
-
-let count = 0;
 export default {
-    name: 'home',
-    data() {
-        return {
-            list: [
-                {
-                    name: 'John',
-                    id: 25
-                },
-                {
-                    name: 'Joao',
-                    id: 7
-                },
-                {
-                    name: 'Albert',
-                    id: 12
-                },
-                {
-                    name: 'Jean',
-                    id: 100
-                }
-            ],
-            selected: null,
-            sortOption: null,
-            filterOption: null,
-            filterText: ''
-        };
-    },
-    components: {
-        HelloWorld,
-        isotope
-    },
-    methods: {
-        getOptions: function() {
-            var _this = this;
-            return {
-                layoutMode: 'masonry',
-                masonry: {
-                    gutter: 10
-                },
-                getSortData: {
-                    id: 'id',
-                    name: function(itemElem) {
-                        return itemElem.name.toLowerCase();
-                    }
-                },
-                getFilterData: {
-                    isEven: function(itemElem) {
-                        return itemElem.id % 2 === 0;
-                    },
-                    isOdd: function(itemElem) {
-                        return itemElem.id % 2 !== 0;
-                    },
-                    filterByText: function(itemElem) {
-                        return itemElem.name.toLowerCase().includes(_this.filterText.toLowerCase());
-                    }
-                }
-            };
-        },
-        add: function() {
-            this.list.push({
-                name: 'Juan',
-                id: count++
-            });
-        },
-        replace: function() {
-            this.list = [
-                {
-                    name: 'Edgard',
-                    id: count++
-                },
-                {
-                    name: 'James',
-                    id: count++
-                }
-            ];
-        },
-        remove: function() {
-            if (this.list.length) this.list.splice(0, 1);
-        },
-        sort: function(key) {
-            this.isotopeSort(key);
-            this.sortOption = key;
-        },
-        filter: function(key) {
-            if (this.filterOption == key) key = null;
-            this.isotopeFilter(key);
-            this.filterOption = key;
-        },
-        shuttle: function() {
-            this.isotopeShuttle();
-            this.sortOption = null;
+  mounted() {
+    var iso = new Isotope('.grid', {
+      itemSelector: '.element-item',
+      layoutMode: 'fitRows',
+      getSortData: {
+        name: '.name',
+        symbol: '.symbol',
+        number: '.number parseInt',
+        category: '[data-category]',
+        weight: function (itemElem) {
+          var weight = itemElem.querySelector('.weight').textContent;
+          return parseFloat(weight.replace(/[\(\)]/g, ''));
         }
+      }
+    });
+
+    // bind sort button click
+    var sortByGroup = document.querySelector('.sort-by-button-group');
+    sortByGroup.addEventListener('click', function (event) {
+      // only button clicks
+      if (!matchesSelector(event.target, '.button')) {
+        return;
+      }
+      var sortValue = event.target.getAttribute('data-sort-value');
+      iso.arrange({ sortBy: sortValue });
+    });
+
+    // change is-checked class on buttons
+    var buttonGroups = document.querySelectorAll('.button-group');
+    for (var i = 0; i < buttonGroups.length; i++) {
+      buttonGroups[i].addEventListener('click', onButtonGroupClick);
     }
-};
+
+    function onButtonGroupClick(event) {
+      // only button clicks
+      if (!matchesSelector(event.target, '.button')) {
+        return;
+      }
+      var button = event.target;
+      button.parentNode.querySelector('.is-checked').classList.remove('is-checked');
+      button.classList.add('is-checked');
+    }
+
+    // filter functions
+    var filterFns = {
+      // show if number is greater than 50
+      numberGreaterThan50: function (itemElem) {
+        var number = itemElem.querySelector('.number').textContent;
+        return parseInt(number, 10) > 50;
+      },
+      // show if name ends with -ium
+      ium: function (itemElem) {
+        var name = itemElem.querySelector('.name').textContent;
+        return name.match(/ium$/);
+      }
+    };
+
+    // bind filter button click
+    var filtersElem = document.querySelector('.filters-button-group');
+    filtersElem.addEventListener('click', function (event) {
+      // only work with buttons
+      if (!matchesSelector(event.target, 'button')) {
+        return;
+      }
+      var filterValue = event.target.getAttribute('data-filter');
+      // use matching filter function
+      filterValue = filterFns[filterValue] || filterValue;
+      iso.arrange({ filter: filterValue });
+    });
+
+    // change is-checked class on buttons
+    var buttonGroups = document.querySelectorAll('.button-group');
+    for (var i = 0, len = buttonGroups.length; i < len; i++) {
+      var buttonGroup = buttonGroups[i];
+      radioButtonGroup(buttonGroup);
+    }
+
+    function radioButtonGroup(buttonGroup) {
+      buttonGroup.addEventListener('click', function (event) {
+        // only work with buttons
+        if (!matchesSelector(event.target, 'button')) {
+          return;
+        }
+        buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+        event.target.classList.add('is-checked');
+      });
+    }
+  }
+}
 </script>
 
-<style lang="scss">
-#home {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
-.item {
-    background-color: #eee;
-    padding: 10px;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    font-family: monospace;
-    color: #333;
+<style lang="scss" scoped>
+* {
+  box-sizing: border-box;
 }
 
-.is-checked {
-    background-color: #28f;
+body {
+  font-family: sans-serif;
 }
 
-.isoDefault {
-    min-height: 210px;
+/* ---- button ---- */
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-bottom: 10px;
+  background: #eee;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0.2)
+  );
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8cf;
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #28f;
+}
+
+.button.is-checked {
+  color: white;
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child {
+  border-radius: 0.5em 0 0 0.5em;
+}
+.button-group .button:last-child {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  border: 1px solid #333;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 10px;
+  background: #888;
+  color: #262524;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item .name {
+  position: absolute;
+
+  left: 10px;
+  top: 60px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.element-item .symbol {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+}
+
+.element-item .number {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+}
+
+.element-item .weight {
+  position: absolute;
+  left: 10px;
+  top: 76px;
+  font-size: 12px;
+}
+
+.element-item.alkali {
+  background: #f00;
+  background: hsl(0, 100%, 50%);
+}
+.element-item.alkaline-earth {
+  background: #f80;
+  background: hsl(36, 100%, 50%);
+}
+.element-item.lanthanoid {
+  background: #ff0;
+  background: hsl(72, 100%, 50%);
+}
+.element-item.actinoid {
+  background: #0f0;
+  background: hsl(108, 100%, 50%);
+}
+.element-item.transition {
+  background: #0f8;
+  background: hsl(144, 100%, 50%);
+}
+.element-item.post-transition {
+  background: #0ff;
+  background: hsl(180, 100%, 50%);
+}
+.element-item.metalloid {
+  background: #08f;
+  background: hsl(216, 100%, 50%);
+}
+.element-item.diatomic {
+  background: #00f;
+  background: hsl(252, 100%, 50%);
+}
+.element-item.halogen {
+  background: #f0f;
+  background: hsl(288, 100%, 50%);
+}
+.element-item.noble-gas {
+  background: #f08;
+  background: hsl(324, 100%, 50%);
 }
 </style>

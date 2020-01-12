@@ -9,12 +9,13 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "core-js": "^2.6.5",
+    "isotope-layout": "^3.0.6",
+    "lodash": "^4.17.15",
     "pdfjs": "^2.3.3",
     "pdfvuer": "^1.4.0",
     "vue": "^2.6.10",
     "vue-navigation-bar": "^2.0.0",
     "vue-router": "^3.0.3",
-    "vueisotope": "^3.1.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
