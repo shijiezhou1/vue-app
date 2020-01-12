@@ -14,6 +14,7 @@
     "vue": "^2.6.10",
     "vue-navigation-bar": "^2.0.0",
     "vue-router": "^3.0.3",
+    "vueisotope": "^3.1.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
