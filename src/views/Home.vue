@@ -7,62 +7,76 @@
       <button
         class="button is-checked"
         data-sort-value="original-order"
-      >original order</button>
+      >original order
+      </button>
       <button
         class="button"
         data-sort-value="name"
-      >name</button>
+      >name
+      </button>
       <button
         class="button"
         data-sort-value="symbol"
-      >symbol</button>
+      >symbol
+      </button>
       <button
         class="button"
         data-sort-value="number"
-      >number</button>
+      >number
+      </button>
       <button
         class="button"
         data-sort-value="weight"
-      >weight</button>
+      >weight
+      </button>
       <button
         class="button"
         data-sort-value="category"
-      >category</button>
+      >category
+      </button>
     </div>
 
     <div class="button-group filters-button-group">
       <button
         class="button is-checked"
         data-filter="*"
-      >show all</button>
+      >show all
+      </button>
       <button
         class="button"
         data-filter=".metal"
-      >metal</button>
+      >metal
+      </button>
       <button
         class="button"
         data-filter=".transition"
-      >transition</button>
+      >transition
+      </button>
       <button
         class="button"
         data-filter=".alkali, .alkaline-earth"
-      >alkali and alkaline-earth</button>
+      >alkali and alkaline-earth
+      </button>
       <button
         class="button"
         data-filter=":not(.transition)"
-      >not transition</button>
+      >not transition
+      </button>
       <button
         class="button"
         data-filter=".metal:not(.transition)"
-      >metal but not transition</button>
+      >metal but not transition
+      </button>
       <button
         class="button"
         data-filter="numberGreaterThan50"
-      >number > 50</button>
+      >number > 50
+      </button>
       <button
         class="button"
         data-filter="ium"
-      >name ends with &ndash;ium</button>
+      >name ends with &ndash;ium
+      </button>
     </div>
 
     <div class="grid">
@@ -340,14 +354,10 @@ body {
   display: inline-block;
   padding: 0.5em 1em;
   margin-bottom: 10px;
-  background: #eee;
   border: none;
   border-radius: 7px;
-  background-image: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0),
-    hsla(0, 0%, 0%, 0.2)
-  );
+  background: #eee
+    linear-gradient(to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2));
   color: #222;
   font-family: sans-serif;
   font-size: 16px;
@@ -390,6 +400,7 @@ body {
 .button-group .button:first-child {
   border-radius: 0.5em 0 0 0.5em;
 }
+
 .button-group .button:last-child {
   border-radius: 0 0.5em 0.5em 0;
 }
@@ -463,38 +474,47 @@ body {
   background: #f00;
   background: hsl(0, 100%, 50%);
 }
+
 .element-item.alkaline-earth {
   background: #f80;
   background: hsl(36, 100%, 50%);
 }
+
 .element-item.lanthanoid {
   background: #ff0;
   background: hsl(72, 100%, 50%);
 }
+
 .element-item.actinoid {
   background: #0f0;
   background: hsl(108, 100%, 50%);
 }
+
 .element-item.transition {
   background: #0f8;
   background: hsl(144, 100%, 50%);
 }
+
 .element-item.post-transition {
   background: #0ff;
   background: hsl(180, 100%, 50%);
 }
+
 .element-item.metalloid {
   background: #08f;
   background: hsl(216, 100%, 50%);
 }
+
 .element-item.diatomic {
   background: #00f;
   background: hsl(252, 100%, 50%);
 }
+
 .element-item.halogen {
   background: #f0f;
   background: hsl(288, 100%, 50%);
 }
+
 .element-item.noble-gas {
   background: #f08;
   background: hsl(324, 100%, 50%);
