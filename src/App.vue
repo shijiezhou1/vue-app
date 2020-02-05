@@ -29,13 +29,13 @@ export default {
                         subMenuOptions: [
                             {
                                 type: 'link',
-                                text: 'Customer Service',
+                                text: 'Expedition',
                                 path: './project',
                                 iconLeft: '<i class="fa fa-user fa-fw"></i>'
                             },
                             {
                                 type: 'link',
-                                text: 'Accounting',
+                                text: 'Collection',
                                 path: './accounting',
                                 iconLeft: '<i class="fa fa-star fa-fw"></i>'
                             },
@@ -44,10 +44,9 @@ export default {
                             },
                             {
                                 type: 'link',
-                                text: 'Reception',
+                                text: 'Exclusive',
                                 path: './reception',
-                                iconLeft:
-                                    '<svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" /> <circle cx="16" cy="21" r="4" /> </svg>'
+                                iconLeft: '<i class="fa fa-superpowers" aria-hidden="true"></i>'
                             }
                         ]
                     },
@@ -56,10 +55,10 @@ export default {
                         text: 'About',
                         subMenuOptions: [
                             {
-                                isLinkAction: true,
+                                isLinkAction: false,
                                 type: 'link',
                                 text: 'About',
-                                subText: 'Stupid corporate wet blankets. Like booze ever killed anyone.',
+                                subText: 'Information about who is about',
                                 path: './about'
                             },
                             {
@@ -67,18 +66,18 @@ export default {
                             },
                             {
                                 type: 'link',
-                                text: 'Locations',
-                                subText: "You're a presentation tool!",
-                                path: './locations'
+                                text: 'Blog',
+                                subText: 'Enjoy writing blog on Bed. Sue me.',
+                                path: './blog'
                             },
                             {
                                 type: 'hr'
                             },
                             {
                                 type: 'link',
-                                text: 'Blog',
-                                subText: 'I enjoy having breakfast in bed. I like waking up to the smell of bacon. Sue me.',
-                                path: './blog'
+                                text: 'Locations',
+                                subText: 'Location relative',
+                                path: './locations'
                             }
                         ]
                     },
@@ -114,7 +113,7 @@ export default {
     methods: {
         vnbItemClicked(text) {
             if (text === 'About') {
-                alert("'About' was selected.");
+                // alert("'About' was selected.");
             }
         }
     }

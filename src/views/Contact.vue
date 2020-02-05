@@ -1,22 +1,21 @@
 <template>
-    <div id="project">
-        <h1>Project:</h1>
-        <BlogCard/>
+    <div id="contact"><h1>Contact:</h1>
+    <h2>Subscribe</h2>
+    Emial Address: <input type="text">
+    <h2>Communication</h2>
+    <h2>Social Media</h2>
+    <div>Facebook</div>
+    <div>Linkedin</div>
+    <div>Medium</div>
+    <div>Twitter</div>
+    <div>Reddit</div>
     </div>
 </template>
 
-<script>
-import BlogCard from '../components/BlogCard.vue';
-
-export default {
-    components: {
-        BlogCard: BlogCard
-    }
-};
-</script>
+<script></script>
 
 <style lang="scss" scoped="scoped">
-#project {
+#contact {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Project from './views/Project.vue'
 import Cv from './views/Cv.vue'
+import Contact from './views/Contact.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -31,5 +32,10 @@ export default new Router({
     	name: 'cv',
     	component: Cv
     },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: Contact
+    }
   ]
 })
