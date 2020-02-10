@@ -6,13 +6,24 @@
             author="Edward Gibbon"
             occupation="British historian"
         ></BlockQuoteContent>
+        <div class="flex-container">
+            <img class="profile" :src="profileImage" alt="profileImage">
+            <p>{{profileDescription}}</p>
+        </div>
     </div>
 </template>
 
 <script>
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 export default {
-    components: { BlockQuoteContent }
+    components: { BlockQuoteContent },
+    data: () => ({
+        profileImage: require('@/assets/profile/profile.jpg'),
+        profileDescription: `Shijie Zhou studies at University of California, San Diego in the Interdisciplinary Computer in Arts. He is also the member for design and construct web developer at the Worldview project organization. Currently, he is working in Akirix(MMSG department) with software engineer.
+
+He used to work on programming artist and digital image designer at the Digital Gym Cinema as internet. He obtains Associate degree in Green River College, and also finish the B.A. degree at UCSD.
+He gained experience in media use and computer art. He also familiar with web design and customize selling pages on ebay which promote stuffs at leisure time..`
+    })
 };
 </script>
 
@@ -24,34 +35,16 @@ export default {
     text-align: center;
     color: #2c3e50;
 
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) {
-        & img {
-            width: 100%;
-        }
-    }
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-        & img {
-            max-width: 768px;
-        }
-    }
     & img {
-        max-width: 768px;
+        max-width: 100px;
     }
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-        & img {
-            max-width: 768px;
-        }
+    
+    .profile {
+        float: right;
     }
-
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) {
-        & img {
-            max-width: 768px;
-        }
+    
+    .flex-container {
+        overflow: auto;
     }
 }
 </style>
