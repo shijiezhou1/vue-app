@@ -35,5 +35,3 @@ vue add router
 
 ## Library
 
-```
-```
