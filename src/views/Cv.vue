@@ -1,71 +1,93 @@
 <template>
-    <div id="pdfvuer">
-        <pdf :src="pdfdata" v-for="i in numPages" :key="i" :id="i" :page="i" :scale.sync="scale" style="width:100%;margin:20px auto;">
-            <template slot="loading">
-                loading content here...
-            </template>
-        </pdf>
-    </div>
+  <div id="pdfvuer">
+    <loading class="vld-overlay" :active.sync="isLoading"
+             :can-cancel="false"
+             :is-full-page="fullPage"
+             color="#9e9eff"
+             height="200px"
+             width="200px"
+    ></loading>
+    <pdf :src="pdfdata" v-for="i in numPages" :key="i" :id="i" :page="i" :scale.sync="scale"
+         style="width:100%;margin:20px auto;">
+      <template slot="loading">
+        loading content here...
+      </template>
+    </pdf>
+  </div>
 </template>
 
 <script>
-// script is reference to advance pdfvuer
-import pdfvuer from 'pdfvuer';
+  // script is reference to advance pdfvuer
+  import pdfvuer from 'pdfvuer';
+  import Loading from 'vue-loading-overlay';
 
-export default {
+  export default {
     components: {
-        pdf: pdfvuer
+      pdf: pdfvuer,
+      Loading: Loading
     },
     data() {
-        return {
-            page: 1,
-            numPages: 0,
-            pdfdata: undefined,
-            errors: [],
-            scale: 'page-width'
-        };
+      return {
+        page: 1,
+        numPages: 0,
+        pdfdata: undefined,
+        errors: [],
+        scale: 'page-width',
+        isLoading: false,
+        fullPage: true
+      };
     },
     computed: {
-        formattedZoom() {
-            return Number.parseInt(this.scale * 100);
-        }
+      formattedZoom() {
+        return Number.parseInt( this.scale * 100 );
+      }
     },
     mounted() {
-        this.getPdf();
+      this.isLoading = true;
+      this.getPdf();
     },
     watch: {
-        show: function(s) {
-            if (s) {
-                this.getPdf();
-            }
-        },
-        page: function(p) {
-            if (
-                window.pageYOffset <= this.findPos(document.getElementById(p)) ||
-                (document.getElementById(p + 1) && window.pageYOffset >= this.findPos(document.getElementById(p + 1)))
-            ) {
-                // window.scrollTo(0,this.findPos(document.getElementById(p)));
-                document.getElementById(p).scrollIntoView();
-            }
+      show: function ( s ) {
+        if ( s ) {
+          this.getPdf();
         }
+      },
+      page: function ( p ) {
+        if (
+          window.pageYOffset <= this.findPos( document.getElementById( p ) ) ||
+          ( document.getElementById( p + 1 ) && window.pageYOffset >= this.findPos( document.getElementById( p + 1 ) ) )
+        ) {
+          // window.scrollTo(0,this.findPos(document.getElementById(p)));
+          document.getElementById( p ).scrollIntoView();
+        }
+      }
     },
     methods: {
-        getPdf() {
-            var self = this;
-            self.pdfdata = pdfvuer.createLoadingTask('./pdf/resume.pdf');
-            self.pdfdata.then(pdf => {
-                self.numPages = pdf.numPages;
-            });
-        },
-        findPos(obj) {
-            return obj.offsetTop;
-        }
+      getPdf() {
+        var self = this;
+        self.pdfdata = pdfvuer.createLoadingTask( './pdf/resume.pdf' );
+        self.pdfdata.then( pdf => {
+          this.isLoading = false;
+          self.numPages = pdf.numPages;
+        } );
+      },
+      findPos( obj ) {
+        return obj.offsetTop;
+      }
     }
-};
+  };
 </script>
 
 <style lang="scss" scoped>
-.content {
+  .content {
     padding: 16px;
-}
+  }
+
+  .vld-overlay {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 </style>
