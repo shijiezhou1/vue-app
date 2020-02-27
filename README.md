@@ -1,4 +1,6 @@
-# default
+# Vue-App
+
+The is the app to show display all the blog posts.
 
 ## Project setup
 ```
