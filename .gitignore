@@ -1,6 +1,6 @@
 # Build
 dist/
-
+.idea/
 # Logs
 logs
 *.log

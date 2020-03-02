@@ -1,7 +1,7 @@
 <template>
   <div id="notfound">
-    <h1>Oops! Page not found</h1>
-    <h3>The {{ resource }} you're looking for is not found.</h3>
+    <h1>Oops! Page Not Found</h1>
+    <h4>The {{ resource }} you're looking for is not found.</h4>
     <router-link :to="{ name: 'home' }">Back to the home page</router-link>
   </div>
 </template>

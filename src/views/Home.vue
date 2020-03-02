@@ -34,7 +34,7 @@
 let hackerList;
 export default {
     mounted() {
-        var options = {
+        const options = {
             valueNames: ['name', 'city']
         };
         hackerList = new List('hacker-list', options);
@@ -49,9 +49,3 @@ export default {
     }
 };
 </script>
-
-<style scoped>
-    #hacker-list {
-        text-align: center;
-    }
-</style>

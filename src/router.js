@@ -1,20 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import * as views from "./views/index";
-Vue.use(Router)
 
-export default new Router({
+Vue.use( Router );
+
+export default new Router( {
   routes: [
     {
       path: '*',
-      redirect: { name: '404' }
-    },
-    {
-      path: '/404',
       name: '404',
+      // redirect: { name: '404' }
       component: views.NotFound,
-      props: (route) =>{
-        return { resource: route.path }
+      props: ( route ) => {
+        return {resource: route.path}
       }
     },
     {
@@ -43,4 +41,4 @@ export default new Router({
       component: views.Contact
     }
   ]
-})
+} )
