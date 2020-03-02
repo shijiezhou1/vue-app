@@ -50,4 +50,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+    #hacker-list {
+        text-align: center;
+    }
+</style>
