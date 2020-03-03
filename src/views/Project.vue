@@ -2,6 +2,9 @@
     <div id="project">
         <h1>Project:</h1>
         <BlogCard/>
+        <BlogCard/>
+        <BlogCard/>
+        <BlogCard/>
     </div>
 </template>
 
