@@ -29,18 +29,10 @@ export default {
 
 <style lang="scss" scoped="scoped">
 #BlogCard {
-    margin: 10px auto;
-    width: 100%;
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-        width: 80%;
-    }
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) {
-        width: 50%;
-    }
+    width: 40rem;
+    height: 13.625rem;
+    margin: auto;
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
     $bg: #eedfcc;
     $text: #777;
