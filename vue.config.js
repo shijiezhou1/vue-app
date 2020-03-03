@@ -2,7 +2,7 @@ module.exports = {
     filenameHashing: true,
     publicPath: process.env.NODE_ENV === 'production' ?
         '/':
-        '/vue-app/'
+        '/vue-app/',
     lintOnSave: process.env.NODE_ENV !== 'production',
     pages: {
         index: {
