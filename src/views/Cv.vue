@@ -67,7 +67,7 @@
         var self = this;
         self.pdfdata = pdfvuer.createLoadingTask( './pdf/resume.pdf' );
         self.pdfdata.then( pdf => {
-          // this.isLoading = false;
+          this.isLoading = false;
           self.numPages = pdf.numPages;
         } );
       },
