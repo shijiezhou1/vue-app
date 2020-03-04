@@ -9,12 +9,11 @@
         <div class="flex-container">
             <img class="profile" :src="profileImage" alt="profileImage" />
             <p>{{ profileDescription }}</p>
-        </div>
-
-        <!-- Prepare a container for your calendar. -->
-        <div class="calendar">
-            <!-- Loading stuff -->
-            Loading the data just for you.
+            <!-- Prepare a container for your calendar. -->
+            <div class="calendar">
+                <!-- Loading stuff -->
+                Loading the data just for you.
+            </div>
         </div>
     </div>
 </template>
@@ -83,6 +82,16 @@ He gained experience in media use and computer art. He also familiar with web de
 
     .flex-container {
         overflow: auto;
+        margin: 10px auto;
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+            width: 100%;
+        }
+        
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            max-width: 50%;
+        }
     }
 }
 </style>
