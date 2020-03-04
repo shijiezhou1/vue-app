@@ -11,7 +11,8 @@ export default new Vuex.Store({
   modules: {
     user,
     event,
-    notification
+    notification,
+    post
   },
   state: {
     categories: [
