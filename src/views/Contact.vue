@@ -2,9 +2,9 @@
     <div id="contact">
         <h1>Contact:</h1>
         <BlockQuoteContent
-        content="Tough-minded optimists approach problems with a can-do philosophy and emerge stronger from tragedies"
-        author="Lucius Annaeus Senca"
-        occupation="Ancient Roman philosopher"
+            content="Tough-minded optimists approach problems with a can-do philosophy and emerge stronger from tragedies"
+            author="Lucius Annaeus Senca"
+            occupation="Ancient Roman philosopher"
         ></BlockQuoteContent>
         <h2>Subscribe</h2>
         Emial Address:
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-    import BlockQuoteContent from '../components/BlockQuoteContent.vue';
-    export default {
-        components: {
-            BlockQuoteContent
-        }
+import BlockQuoteContent from '../components/BlockQuoteContent.vue';
+export default {
+    components: {
+        BlockQuoteContent
     }
+};
 </script>
 
 <style lang="scss" scoped="scoped">

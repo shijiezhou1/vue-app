@@ -1,5 +1,5 @@
 <template>
-    <div id="BlogCard">
+    <div id="BlogContainerCard">
         <a class="card-link" :href="link">
             <article class="blog-card">
                 <img class="post-image" :src="source" />
@@ -27,24 +27,15 @@ export default {
     },
     computed: {
         source() {
-            // const regex = /src=\\"([^"]+)\\"/;
-            // const result = this.image.match(regex);
-            // console.log(result);
-            return this.image || 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg';
+            const regex = /src=\"([^"]+)\"/;
+            return this.image.match(regex)[1] || 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg';
         }
     }
-    // data: () => ({
-    //   name: '10 Best Things to Do in Seattle',
-    //   category: 'Travel',
-    //   image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg',
-    //   author: 'Katherine Kato',
-    //   desc: `Seattle is a seaport city on the west coast of the United States...`
-    // })
 };
 </script>
 
 <style lang="scss" scoped="scoped">
-#BlogCard {
+#BlogContainerCard {
     margin: 10px auto;
     width: 100%;
 
