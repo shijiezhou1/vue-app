@@ -29,7 +29,7 @@
         <button @click="sort()">sort</button>
     </div> -->
     <div id="home">
-        <BlogContainer :content="this.mediumData" />
+        <BlogContainer :contents="this.mediumData" />
     </div>
 </template>
 
@@ -54,9 +54,9 @@ export default {
             .then(function(response) {
                 // handle success
                 // TODO Remove setTimeout 
-                setTimeout(function(){ 
+                // setTimeout(function(){ 
                     self.mediumData = response.data;
-                }, 3000);
+                // }, 3000);
             })
             .catch(function(error) {
                 // handle error
