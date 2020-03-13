@@ -1,5 +1,5 @@
 <template>
-    <div id="hacker-list">
+    <!-- <div id="hacker-list">
         <input class="search" />
         <span class="sort" data-sort="name">Sort by name</span>
         <span class="sort" data-sort="city">Sort by city</span>
@@ -27,25 +27,95 @@
             </li>
         </ul>
         <button @click="sort()">sort</button>
+    </div> -->
+    <div id="home">
+        <BlogContainer :content="this.mediumData" />
     </div>
 </template>
 
 <script>
-let hackerList;
+// let hackerList;
+import axios from 'axios';
+import BlogContainer from '../components/BlogContainer.vue';
+
 export default {
-    mounted() {
-        const options = {
-            valueNames: ['name', 'city']
-        };
-        hackerList = new List('hacker-list', options);
+    components: {
+        BlogContainer
     },
-    methods: {
-        add() {
-            hackerList.add({ name: 'Jonas', city: 'Berlin' });
-        },
-        sort() {
-            hackerList.sort('name', { order: 'asc' });
-        }
+    data: function() {
+        return {
+            mediumData: null
+        };
+    },
+    created() {
+        const self = this;
+        axios
+            .get('https://www.shijiezhou.net/medium')
+            .then(function(response) {
+                // handle success
+                // TODO Remove setTimeout 
+                setTimeout(function(){ 
+                    self.mediumData = response.data;
+                }, 3000);
+            })
+            .catch(function(error) {
+                // handle error
+                console.log(error);
+            });
     }
+    // mounted() {
+    //     const options = {
+    //         valueNames: ['name', 'city']
+    //     };
+    //     hackerList = new List('hacker-list', options);
+    // },
+    // methods: {
+    //     add() {
+    //         hackerList.add({ name: 'Jonas', city: 'Berlin' });
+    //     },
+    //     sort() {
+    //         hackerList.sort('name', { order: 'asc' });
+    //     }
+    // }
 };
 </script>
+
+<style lang="scss" scoped="scoped">
+#home {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        & img {
+            width: 100%;
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        & img {
+            max-width: 768px;
+        }
+    }
+    & img {
+        max-width: 768px;
+    }
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        & img {
+            max-width: 768px;
+        }
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        & img {
+            max-width: 768px;
+        }
+    }
+}
+</style>
