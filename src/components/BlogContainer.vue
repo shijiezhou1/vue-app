@@ -30,7 +30,7 @@ export default {
     },
     computed: {
         contentsComputed() {
-            console.log('I change when this.contents changes.');
+            console.log('I change when this.contents changes.', this.contents);
             return this.contents;
         }
     }
