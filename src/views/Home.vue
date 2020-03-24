@@ -54,7 +54,7 @@ export default {
             .then(function(response) {
                 // handle success
                 // TODO Remove setTimeout 
-                // setTimeout(function(){ 
+                // setTimeout(function(){
                     self.mediumData = response.data;
                 // }, 3000);
             })
