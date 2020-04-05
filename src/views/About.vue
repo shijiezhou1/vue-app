@@ -15,17 +15,23 @@
                 Loading the data just for you.
             </div>
         </div>
+        <h2>{{title}}</h2>
+        <AboutCard v-on:titleChanged="updateTitle" ></AboutCard>
+        
+        <button @click="reset">Reset</button>
     </div>
 </template>
 
 <script>
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import GitHubCalendar from 'github-calendar';
+import AboutCard from "../components/AboutCard.vue"
 import axios from 'axios';
 
 export default {
-    components: { BlockQuoteContent },
+    components: { BlockQuoteContent, AboutCard },
     data: () => ({
+        title: "父 刚开始的值",
         profileImage: require('@/assets/profile/profile.jpg'),
         profileDescription: `Shijie Zhou studies at University of California, San Diego in the Interdisciplinary Computer in Arts. He is also the member for design and construct web developer at the Worldview project organization. Currently, he is working in Akirix(MMSG department) with software engineer.
 
@@ -58,6 +64,14 @@ He gained experience in media use and computer art. He also familiar with web de
                 // handle error
                 console.log(error);
             });
+    }, 
+    methods: {
+        updateTitle(e){
+          this.title = e;
+        },
+        reset() {
+            this.title = '父 刚开始的值'
+        }
     }
 };
 </script>
