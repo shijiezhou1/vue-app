@@ -45,7 +45,7 @@ export default {
     }
     // Large devices (desktops, 992px and up)
     @media (min-width: 992px) {
-        width: 50%;
+        width: 60%;
     }
     $bg: #eedfcc;
     $text: #777;
