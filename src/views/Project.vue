@@ -1,5 +1,6 @@
 <template>
     <div id="project">
+    <title>{{title}}</title>
         <h1>Project:</h1>
         <BlogCard/>
         <BlogCard/>
@@ -14,6 +15,11 @@ import BlogCard from '../components/BlogCard.vue';
 export default {
     components: {
         BlogCard: BlogCard
+    },
+    data() {
+        return {
+            title: "🔥｜ Project"
+        }
     }
 };
 </script>

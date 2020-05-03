@@ -1,5 +1,6 @@
 <template>
   <div id="notfound">
+    <title>{{title}}</title>
     <h1>Oops! Page Not Found</h1>
     <h4>The {{ resource }} you're looking for is not found.</h4>
     <router-link :to="{ name: 'home' }">Back to the home page</router-link>
@@ -7,6 +8,11 @@
 </template>
 <script>
 export default {
+  data() {
+        return {
+            title: "404 Not Found"
+        }
+  },
   props: {
     resource: {
       type: String,

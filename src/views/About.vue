@@ -1,5 +1,6 @@
 <template>
     <div id="about">
+        <title>{{title}}</title>
         <h1>About</h1>
         <BlockQuoteContent
             content="Every person has two education, one whihc he receive from other, and one, more important, which he gives himself."
@@ -42,27 +43,27 @@ He gained experience in media use and computer art. He also familiar with web de
         // or enable responsive functionality
         GitHubCalendar('.calendar', 'shijiezhou1', { responsive: true });
 
-        axios
-            .get('localhost:1234/random/5')
-            .then(function(response) {
-                // handle success
-                console.log('1234', response);
-            })
-            .catch(function(error) {
-                // handle error
-                console.log(error);
-            });
+        // axios
+        //     .get('localhost:1234/random/5')
+        //     .then(function(response) {
+        //         // handle success
+        //         console.log('1234', response);
+        //     })
+        //     .catch(function(error) {
+        //         // handle error
+        //         console.log(error);
+        //     });
 
-        axios
-            .get('localhost:3000/random/5')
-            .then(function(response) {
-                // handle success
-                console.log('3000', response);
-            })
-            .catch(function(error) {
-                // handle error
-                console.log(error);
-            });
+        // axios
+        //     .get('localhost:3000/random/5')
+        //     .then(function(response) {
+        //         // handle success
+        //         console.log('3000', response);
+        //     })
+        //     .catch(function(error) {
+        //         // handle error
+        //         console.log(error);
+        //     });
     }, 
     methods: {
         updateTitle(e){
