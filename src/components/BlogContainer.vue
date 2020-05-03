@@ -26,7 +26,7 @@ export default {
         console.log('contents will update, as this.property is now reactive.', this.contents);
     },
     mounted() {
-        console.log('mounted', this.contents);
+        console.log('mounted contents:', this.contents);
     },
     computed: {
         contentsComputed() {
