@@ -16,9 +16,8 @@
             </div>
         </div>
         <h2>{{title}}</h2>
-        <AboutCard v-on:titleChanged="updateTitle" ></AboutCard>
-        
         <button @click="reset">Reset</button>
+        <AboutCard v-on:titleChanged="updateTitle" ref="comA"></AboutCard>
     </div>
 </template>
 

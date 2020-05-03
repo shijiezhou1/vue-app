@@ -1,5 +1,8 @@
 <template>
-    <button @click="changeTitle">Click Here</button>
+    <div>
+        <button @click="changeTitle">Click Here</button>
+        <hr>
+    </div>
 </template>
 
 <script>
@@ -7,12 +10,13 @@
       name: 'app-header',
       data() {
         return {
+            age: '100'
         }
       },
       methods:{
         changeTitle() {
-          this.$emit("titleChanged","子向父组件传值");
-        }
+            this.$emit("titleChanged","子向父组件传值");
+        },
       }
     }
 </script>

@@ -3,15 +3,14 @@
     <loading class="vld-overlay" :active.sync="isLoading"
              :can-cancel="false"
              :is-full-page="fullPage"
-             color="#9e9eff"
-             height="200px"
-             width="200px"
+             :width=200
+             :height=200
     ></loading>
     <pdf :src="pdfdata" v-for="i in numPages" :key="i" :id="i" :page="i" :scale.sync="scale"
          style="width:100%;margin:20px auto;">
-      <template slot="loading">
+      <!-- <template slot="loading">
         loading content here...
-      </template>
+      </template> -->
     </pdf>
   </div>
 </template>
@@ -34,7 +33,7 @@
         errors: [],
         scale: 'page-width',
         isLoading: false,
-        fullPage: true
+        fullPage: true,
       };
     },
     computed: {
@@ -46,6 +45,7 @@
       this.isLoading = true;
       this.getPdf();
     },
+    
     watch: {
       show: function ( s ) {
         if ( s ) {
@@ -88,5 +88,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    color:green
   }
 </style>
