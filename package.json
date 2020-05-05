@@ -21,6 +21,8 @@
     "vue-loading-overlay": "^3.2.0",
     "vue-navigation-bar": "^2.0.0",
     "vue-router": "^3.0.3",
+    "vue-socket.io": "^3.0.8",
+    "vue-toasted": "^1.1.28",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
