@@ -36,20 +36,14 @@
         <input type="submit" value="Sign In" />
       </p>
     </form> -->
-    <Prometheus />
   </div>
 
 </template>
 
 <script>
 
-import Prometheus from "./components/Prometheus";
-
 export default {
     name: 'app',
-    components: {
-        Prometheus
-    },
     data() {
         return {
             navbarOptions: {

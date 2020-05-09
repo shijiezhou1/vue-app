@@ -28,19 +28,25 @@
         </ul>
         <button @click="sort()">sort</button>
     </div> -->
+    
     <div id="home">
-        <BlogContainer :contents="this.mediumData" />
+        <Prometheus />
+        <!-- <BlogContainer :contents="this.mediumData" /> -->
     </div>
 </template>
 
 <script>
 // let hackerList;
 import axios from 'axios';
+
+import Prometheus from "../components/Prometheus";
+
 import BlogContainer from '../components/BlogContainer.vue';
 
 export default {
     components: {
-        BlogContainer
+        BlogContainer,
+        Prometheus
     },
     data: function() {
         return {
