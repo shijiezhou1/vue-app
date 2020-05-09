@@ -2,12 +2,54 @@
     <div id="app">
         <section class="main-navbar-section"><vue-navigation-bar :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar></section>
         <router-view />
+        
+    <!-- <div v-show="jwt !== null">
+      <p>Returned JWT: {{jwt}}</p>
+      <p>
+        <a @click="logOut" href="#">Log Out</a>
+      </p>
     </div>
+
+    <form class="form-signin" @submit.prevent="login" v-show="jwt == null">
+      <label for="inputUsername">Username</label>
+      &nbsp;
+      <input
+        v-model="username"
+        type="text"
+        id="inputUsername"
+        placeholder="Username"
+        required
+        autofocus
+      />
+      <br />
+      <br />
+      <label for="inputPassword">Password</label>
+      &nbsp;
+      <input
+        v-model="password"
+        type="password"
+        id="inputPassword"
+        placeholder="Password"
+        required
+      />
+      <p>
+        <input type="submit" value="Sign In" />
+      </p>
+    </form> -->
+    <Prometheus />
+  </div>
+
 </template>
 
 <script>
+
+import Prometheus from "./components/Prometheus";
+
 export default {
     name: 'app',
+    components: {
+        Prometheus
+    },
     data() {
         return {
             navbarOptions: {
@@ -107,15 +149,50 @@ export default {
                 //       '<svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M22 6 L30 16 22 26 M30 16 L2 16" /> </svg>'
                 //   }
                 // ]
-            }
+            },
+            username: "admin",
+            password: "passwd",
+            jwt: null,
+
         };
+    },
+    sockets: {
+        auth: function(response) {
+            this.jwt = response.jwt;
+        }
     },
     methods: {
         vnbItemClicked(text) {
             if (text === 'About') {
                 // alert("'About' was selected.");
             }
-        }
+        },
+        
+    login() {
+      if (this.$socket.disconnected) {
+      this.$toasted.global
+        .appError({
+          message: "You are not connected to the server!"
+        })
+        .goAway(1200);
+      } else {
+      this.$socket.emit("authenticate", {
+        data: JSON.stringify({
+          username: this.username,
+          password: this.password
+        })
+      });
+      }
+    },
+    logOut() {
+      this.jwt = null;
+      this.$toasted.global
+        .appSuccess({
+          message: "Locally Logged Out!"
+        })
+        .goAway(1200);
+    }
+
     }
 };
 </script>

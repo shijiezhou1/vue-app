@@ -9,7 +9,6 @@
         <h2>Subscribe</h2>
         Emial Address:
         <input type="text" />
-        <h2>Communication</h2>
         <h2>Social Media</h2>
         <div>Facebook</div>
         <div>Linkedin</div>
