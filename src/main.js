@@ -19,8 +19,8 @@ import VueLazyload from 'vue-lazyload'
 Vue.use(Toasted)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: 'dist/error.png',
-  loading: 'dist/loading.gif',
+  error: require('@/assets/images/error.gif'),
+  loading: require('@/assets/images/loading.gif'),
   attempt: 1
 })
 // Lets Register a Global Toasts.

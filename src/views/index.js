@@ -4,5 +4,6 @@ import Project from './Project.vue'
 import Cv from './Cv.vue'
 import Contact from './Contact.vue'
 import NotFound from './NotFound.vue'
+import Article from './Article.vue';
 
-export { Home, About, Project, Cv, Contact, NotFound };
+export { Home, About, Project, Cv, Contact, NotFound, Article };

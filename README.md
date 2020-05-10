@@ -38,3 +38,16 @@ vue add router
 ## Library
 
 Axios
+
+## Notice: 
+
+### redirect 
+
+When the components redirect to another view route. If `this.$router.push` has an path, the params value will be ignore. 
+
+e.g. 
+```javascript
+this.$router.push({name: 'home', params: { msg: "home"}})
+// or
+this.$router.push({path: '/home', query: {msg: "home"}})
+```

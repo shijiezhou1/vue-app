@@ -21,6 +21,12 @@ export default new Router( {
       component: views.Home
     },
     {
+      path: '/article',
+      name: 'article',
+      component: views.Article,
+      props: true
+    },
+    {
       path: '/about',
       name: 'about',
       component: views.About
