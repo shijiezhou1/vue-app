@@ -2,12 +2,13 @@
     <div id="article">
         <title>{{ title }}</title>
         <h1>{{ msg }}</h1>
+        <div class="article_content" v-html="html"></div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['msg'],
+    props: ['msg', 'html'],
     data() {
         return {
             title: 'Article | 🏖'
@@ -21,42 +22,35 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
     #article {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: #2c3e50;
-    
-        // Small devices (landscape phones, 576px and up)
-        @media (min-width: 576px) {
-            & img {
+        color: #2c3e50;    
+        
+        .article_content {
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+            
+            & * {
+              width: 100%;
+              word-break: break-word;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .article_content {
                 width: 100%;
+                margin: 0 auto;
+                text-align: left;
             }
-        }
-    
-        // Medium devices (tablets, 768px and up)
-        @media (min-width: 768px) {
-            & img {
-                max-width: 768px;
-            }
-        }
-        & img {
-            max-width: 768px;
-        }
-        // Large devices (desktops, 992px and up)
-        @media (min-width: 992px) {
-            & img {
-                max-width: 768px;
-            }
-        }
-    
-        // Extra large devices (large desktops, 1200px and up)
-        @media (min-width: 1200px) {
-            & img {
-                max-width: 768px;
-            }
+            
         }
     }
+    
+    
+    
 </style>

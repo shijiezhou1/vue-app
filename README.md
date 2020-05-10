@@ -51,3 +51,9 @@ this.$router.push({name: 'home', params: { msg: "home"}})
 // or
 this.$router.push({path: '/home', query: {msg: "home"}})
 ```
+
+### Image url 
+
+```
+https://raw.githubusercontent.com/shijiezhou1/Artemis/master/img/xxx.png
+```

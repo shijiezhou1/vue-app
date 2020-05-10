@@ -111,9 +111,9 @@ export default {
                             },
                             {
                                 type: 'link',
-                                text: 'Locations',
-                                subText: 'Location relative',
-                                path: './locations'
+                                text: 'Consociation',
+                                subText: 'Consociation relative',
+                                path: './consociation'
                             }
                         ]
                     },

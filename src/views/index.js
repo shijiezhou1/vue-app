@@ -5,5 +5,6 @@ import Cv from './Cv.vue'
 import Contact from './Contact.vue'
 import NotFound from './NotFound.vue'
 import Article from './Article.vue';
+import Consociation from './Consociation.vue'
 
-export { Home, About, Project, Cv, Contact, NotFound, Article };
+export { Home, About, Project, Cv, Contact, NotFound, Article, Consociation };

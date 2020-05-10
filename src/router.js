@@ -45,6 +45,11 @@ export default new Router( {
       path: '/contact',
       name: 'contact',
       component: views.Contact
+    },
+    {
+      path: '/consociation',
+      name: 'consociation',
+      component: views.Consociation
     }
   ]
 } )
