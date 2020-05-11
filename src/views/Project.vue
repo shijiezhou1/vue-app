@@ -18,8 +18,25 @@ export default {
     },
     data() {
         return {
-            title: "🔥｜ Project"
+            title: "🔥｜ Project",
+            mediumData: null
         }
+    },
+    created() {
+        const self = this;
+        axios
+            .get('https://shijiezhou.heroku.com/medium')
+            .then(function(response) {
+                // handle success
+                // TODO Remove setTimeout 
+                // setTimeout(function(){
+                    self.mediumData = response.data;
+                // }, 3000);
+            })
+            .catch(function(error) {
+                // handle error
+                console.log(error);
+            });
     }
 };
 </script>

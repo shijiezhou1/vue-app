@@ -52,25 +52,8 @@ export default {
     data: function() {
         return {
             title: "Home | 🧩",
-            mediumData: null
         };
     },
-    created() {
-        const self = this;
-        // axios
-        //     .get('https://www.shijiezhou.net/medium')
-        //     .then(function(response) {
-        //         // handle success
-        //         // TODO Remove setTimeout 
-        //         // setTimeout(function(){
-        //             self.mediumData = response.data;
-        //         // }, 3000);
-        //     })
-        //     .catch(function(error) {
-        //         // handle error
-        //         console.log(error);
-        //     });
-    }
     // mounted() {
     //     const options = {
     //         valueNames: ['name', 'city']

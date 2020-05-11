@@ -24,5 +24,25 @@ export default new Vuex.Store({
       'food',
       'community'
     ]
+  },
+  actions: {
+    "SOCKET_oops"(state, server) {
+      console.log('A')
+      Vue.toasted.global.appError({
+        message: server.message
+      }).goAway(1200);
+    },
+    "SOCKET_success"(state, server) {
+      console.log('B')
+      Vue.toasted.global.appSuccess({
+        message: server.message
+      }).goAway(1200);
+    },
+    "SOCKET_info"(state, server) {
+      console.log('C')
+      Vue.toasted.global.appInfo({
+        message: server.message
+      }).goAway(1200);
+    }
   }
 })
