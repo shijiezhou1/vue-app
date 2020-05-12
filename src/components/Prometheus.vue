@@ -4,7 +4,6 @@
       <section
         v-for="item in items"
         :key="item.msg"
-        
       >
          <router-link :to="{ name: 'article', params: { msg: item.msg, html: item.html }}">
           <img
