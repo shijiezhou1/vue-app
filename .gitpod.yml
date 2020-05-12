@@ -7,3 +7,5 @@ image:
 vscode:
   extensions:
     - octref.vetur@0.24.0:aselSn+QoeM1P6qPDDZJXg==
+    - sdras.vue-vscode-snippets@1.9.0:0YBqtGyllWn2PrPQMnwKHg==
+    - eamodio.gitlens@10.2.1:ZI2Sl3DHdJu4aG2wW92CQQ==

@@ -4,7 +4,8 @@ import Project from './Project.vue'
 import Cv from './Cv.vue'
 import Contact from './Contact.vue'
 import NotFound from './NotFound.vue'
-import Article from './Article.vue';
+import Article from './Article.vue'
 import Consociation from './Consociation.vue'
+import Blog from "./Blog.vue";
 
-export { Home, About, Project, Cv, Contact, NotFound, Article, Consociation };
+export { Home, About, Project, Cv, Contact, NotFound, Article, Consociation, Blog };
