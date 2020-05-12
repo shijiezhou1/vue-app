@@ -3,3 +3,7 @@ tasks:
     command: npm run start
 image:
   file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - octref.vetur@0.24.0:aselSn+QoeM1P6qPDDZJXg==
