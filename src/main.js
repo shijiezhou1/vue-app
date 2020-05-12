@@ -5,6 +5,9 @@ import router from './router'
 import VueNavigationBar from "vue-navigation-bar"
 import "vue-navigation-bar/dist/vue-navigation-bar.css"
 
+// Vuetify
+import vuetify from '@/plugins/vuetify' // path to vuetify export
+
 // STORE
 import store from './stores/store'
 
@@ -73,5 +76,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')
