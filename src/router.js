@@ -50,6 +50,11 @@ export default new Router( {
       path: '/consociation',
       name: 'consociation',
       component: views.Consociation
+    },
+     {
+      path: '/blog',
+      name: 'blog',
+      component: views.Blog
     }
   ]
 } )
