@@ -3,7 +3,7 @@
         <title>{{title}}</title>
         <h1>About</h1>
         <BlockQuoteContent
-            content="Every person has two education, one whihc he receive from other, and one, more important, which he gives himself."
+            content="Every person has two education, one which he receives from other, and one, more important, which he gives himself."
             author="Edward Gibbon"
             occupation="British historian"
         ></BlockQuoteContent>
@@ -16,9 +16,9 @@
                 Loading the data just for you.
             </div>
         </div>
-        <h2>{{title}}</h2>
-        <button @click="reset">Reset</button>
-        <AboutCard v-on:titleChanged="updateTitle" ref="comA"></AboutCard>
+        <!-- <h2>{{title}}</h2> -->
+        <!-- <button @click="reset">Reset</button> -->
+        <!-- <AboutCard v-on:titleChanged="updateTitle" ref="comA"></AboutCard> -->
     </div>
 </template>
 
