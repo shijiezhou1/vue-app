@@ -59,3 +59,9 @@ this.$router.push({path: '/home', query: {msg: "home"}})
 ```
 https://raw.githubusercontent.com/shijiezhou1/Artemis/master/img/xxx.png
 ```
+
+### Vue template example 
+
+```
+https://vuejsexamples.com/
+```
