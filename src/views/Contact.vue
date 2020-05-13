@@ -6,8 +6,6 @@
       author="Lucius Annaeus Senca"
       occupation="Ancient Roman philosopher"
     ></BlockQuoteContent>
-
-    
         <v-form 
             class="d-flex justify-center"
             ref="form">
@@ -20,7 +18,6 @@
             <v-btn color="warning" @click="clear">clear</v-btn>
             </v-col>
         </v-form>
-
     <h2>Social Media</h2>
     <div>Facebook</div>
     <div>Linkedin</div>
