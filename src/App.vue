@@ -1,4 +1,5 @@
 <template>
+    <v-app>
     <div id="app">
         <section class="main-navbar-section"><vue-navigation-bar :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar></section>
         <router-view />
@@ -36,8 +37,8 @@
         <input type="submit" value="Sign In" />
       </p>
     </form> -->
-  </div>
-
+    </div>
+    </v-app>
 </template>
 
 <script>
