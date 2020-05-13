@@ -28,8 +28,10 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@mdi/js": "^5.2.45",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
+    "material-design-icons-iconfont": "^5.0.1",
     "node-sass": "^4.13.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
