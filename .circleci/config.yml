@@ -1,4 +1,4 @@
-workflow:
+workflows:
   version: 2
   build-on-schedule:
     jobs:
@@ -7,7 +7,7 @@ workflow:
     # min (0-59) hour (0-23) monthday (1-31) month (1-12) weekday (0-6, 0=Sun)
     triggers:
       - schedule:
-          cron: '0 2 * * 6'
+          cron: '0 1 * * *'
           filters:
             branches:
               only:
@@ -26,10 +26,10 @@ jobs:
         - deploy:
             name: Deploy
             command: |
-              cd docs/
               git config --global user.email "cs5129606@gmail.com"
               git config --global user.name "shijiezhou1"
               git init
               git add -A
               git commit -m 'deploy [ci skip]'
               git push -f git@github.com:shijiezhou1/vue-app.git master:gh-pages
+
