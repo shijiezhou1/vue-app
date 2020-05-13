@@ -1,7 +1,9 @@
 <template>
     <v-app>
     <div id="app">
-        <section class="main-navbar-section"><vue-navigation-bar :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar></section>
+        <section class="main-navbar-section">
+            <vue-navigation-bar id="vue-navigation-bar" :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar>
+        </section>
         <router-view />
         
     <!-- <div v-show="jwt !== null">
@@ -95,7 +97,7 @@ export default {
                                 isLinkAction: false,
                                 type: 'link',
                                 text: 'About',
-                                subText: 'Information about who is about',
+                                subText: 'Information about who is it.',
                                 path: './about'
                             },
                             {
@@ -104,7 +106,7 @@ export default {
                             {
                                 type: 'link',
                                 text: 'Blog',
-                                subText: 'Enjoy writing blog on Bed. Sue me.',
+                                subText: 'Enjoy writing blog on Coach.',
                                 path: './blog'
                             },
                             {
@@ -113,7 +115,7 @@ export default {
                             {
                                 type: 'link',
                                 text: 'Consociation',
-                                subText: 'Consociation relative',
+                                subText: 'Consociation relative.',
                                 path: './consociation'
                             }
                         ]
@@ -192,13 +194,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped="scoped">
+<style lang="scss">
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 #app {
     height: 100%;
     height: 100vh;
     width: 100%;
+
+    #vue-navigation-bar {
+        div a {
+            color: #595959;
+            font-weight: 500;
+        }
+    }
 }
 
 @keyframes octocat-wave {
