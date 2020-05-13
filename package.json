@@ -28,11 +28,15 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@mdi/js": "^5.2.45",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
-    "node-sass": "^4.13.0",
+    "deepmerge": "^4.2.2",
+    "fibers": "^5.0.0",
+    "material-design-icons-iconfont": "^5.0.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "homepage": "https://shijiezhou1.github.io/vue-app"
 }

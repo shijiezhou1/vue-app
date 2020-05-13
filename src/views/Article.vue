@@ -28,11 +28,11 @@ export default {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: #2c3e50;    
+        color: #2c3e50;
         
         .article_content {
             width: 50%;
-            margin: 0 auto;
+            margin: 0 10px;
             text-align: left;
             
             & * {
@@ -43,14 +43,12 @@ export default {
         
         @media (max-width: 992px) {
             .article_content {
-                width: 100%;
-                margin: 0 auto;
+                width: 96%;
+                margin: 0 10px;
                 text-align: left;
             }
             
         }
     }
-    
-    
     
 </style>

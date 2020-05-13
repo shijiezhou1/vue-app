@@ -1,9 +1,9 @@
 <template>
     <v-app>
     <div id="app">
-        <section class="main-navbar-section">
+        <div class="main-navbar-section">
             <vue-navigation-bar id="vue-navigation-bar" :options="navbarOptions" @vnb-item-clicked="vnbItemClicked"></vue-navigation-bar>
-        </section>
+        </div>
         <router-view />
         
     <!-- <div v-show="jwt !== null">
@@ -189,7 +189,6 @@ export default {
         })
         .goAway(1200);
     }
-
     }
 };
 </script>
@@ -197,16 +196,20 @@ export default {
 <style lang="scss">
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+
 #app {
     height: 100%;
     height: 100vh;
     width: 100%;
 
+    // ONLY FOR VUE NAVIGATION BAR
     #vue-navigation-bar {
-        div a {
-            color: #595959;
-            font-weight: 500;
-        }
+        div {
+            > a {
+                font-weight: 500;
+                color: #595959;
+            }
+         } 
     }
 }
 
@@ -225,9 +228,10 @@ export default {
     }
 }
 
-.main-navbar-section {
+div .main-navbar-section {
     background: #fff;
     box-shadow: 0 1px #0000002e;
+    margin: 0px;
 }
 .vnb {
     font-family: 'Montserrat', sans-serif;
