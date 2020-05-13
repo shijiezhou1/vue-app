@@ -72,7 +72,7 @@ export default {
                             {
                                 type: 'link',
                                 text: 'Collection',
-                                path: './accounting',
+                                path: './collection',
                                 iconLeft: '<i class="fa fa-star fa-fw"></i>'
                             },
                             {

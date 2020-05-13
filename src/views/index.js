@@ -7,5 +7,6 @@ import NotFound from './NotFound.vue'
 import Article from './Article.vue'
 import Consociation from './Consociation.vue'
 import Blog from "./Blog.vue";
+import Collection from "./Collection.vue"
 
-export { Home, About, Project, Cv, Contact, NotFound, Article, Consociation, Blog };
+export { Home, About, Project, Cv, Contact, NotFound, Article, Consociation, Blog, Collection };

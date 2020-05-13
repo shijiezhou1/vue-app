@@ -55,6 +55,11 @@ export default new Router( {
       path: '/blog',
       name: 'blog',
       component: views.Blog
+    },
+    {
+        path: '/collection',
+        name: 'colelction',
+        component: views.Collection
     }
   ]
 } )
