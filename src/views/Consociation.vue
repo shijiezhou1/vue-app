@@ -2,7 +2,7 @@
     <div>
         <main>
             <section v-for="item in items" :key="item.msg">
-                <a :href="item.url">
+                <a :href="item.url" target="_blank">
                     <img 
                     :id="item.msg" 
                     class="section-img profile" 
@@ -16,21 +16,16 @@
 </template>
 
 <script>
+import json from '../assets/data.consociation.json';
+
 export default {
     data() {
         return {
-            items: [
-                { url: "https://digitalgym.org/", img: '/images/consociation/digitalgym.jpg', msg: 'digitalgym' },
-                { url: "https://ucsd.edu/", img: '/images/consociation/ucsd.jpg', msg: 'ucsd' },
-                { url: "https://www.facebook.com/ucsdhksu/", img: '/images/consociation/hksu.jpg', msg: 'hksu' },
-                { url: "http://www.steamleadership.com/gameday/speaker/ucsd-vr-club/", img: '/images/consociation/vrclub.jpg', msg: 'vrclub' },
-                { url: "https://www.greenriver.edu/", img: '/images/consociation/grcc.jpg', msg: 'grcc' },
-                { url: "https://revelle.ucsd.edu/", img: '/images/consociation/revelle.jpg', msg: 'revelle' },
-                { url: "https://www.chineseunion.org/", img: '/images/consociation/cu.jpg', msg: 'cu' },
-                { url: "https://www.worldviewproject.org/", img: '/images/consociation/wwp.jpg', msg: 'wwp' },
-                { url: "http://hiss-us.com/us-china-technology-innovation-and-development-uctid/", img: '/images/consociation/uctid.jpg', msg: 'uctid' }
-            ]
+            items: []
         };
+    },
+    created() {
+        this.items = json;
     }
 };
 </script>

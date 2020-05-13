@@ -1,0 +1,81 @@
+<template>
+  <div id="collection">
+    <h1>Collection:</h1>
+    <BlockQuoteContent
+      content="Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
+      author="Antoine de Saint-Exupéry"
+      occupation="French writer, poet, aristocrat, journalist and pioneering aviator"
+    ></BlockQuoteContent>
+
+      <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
+        <v-carousel-item v-for="(slide, i) in slides" :key="i">
+          <v-sheet :color="colors[i]" height="100%">
+            <v-row class="fill-height" align="center" justify="center">
+              <div class="display-3">{{ slide }} Slide</div>
+            </v-row>
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
+  </div>
+</template>
+
+<script>
+import BlockQuoteContent from "../components/BlockQuoteContent.vue";
+export default {
+  components: {
+    BlockQuoteContent
+  },
+  data() {
+    return {
+      colors: [
+        "indigo",
+        "warning",
+        "pink darken-2",
+        "red lighten-1",
+        "deep-purple accent-4"
+      ],
+      slides: ["First", "Second", "Third", "Fourth", "Fifth"]
+    };
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+#collection {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    & img {
+      width: 100%;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    & img {
+      max-width: 768px;
+    }
+  }
+  & img {
+    max-width: 768px;
+  }
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    & img {
+      max-width: 768px;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    & img {
+      max-width: 768px;
+    }
+  }
+}
+</style>
