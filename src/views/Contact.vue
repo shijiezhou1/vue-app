@@ -9,7 +9,7 @@
 
     <v-form ref="form">
       <v-row class="d-flex justify-center">
-        <v-col cols="6">
+        <v-col lg="6" md="6" sm="12">
           <v-text-field
             v-model="email"
             :rules="emailRules"

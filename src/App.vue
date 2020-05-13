@@ -189,12 +189,11 @@ export default {
         })
         .goAway(1200);
     }
-
     }
 };
 </script>
 
-<style lang="scss" scoped="scoped">
+<style lang="scss">
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
 
@@ -202,6 +201,16 @@ export default {
     height: 100%;
     height: 100vh;
     width: 100%;
+
+    // ONLY FOR VUE NAVIGATION BAR
+    #vue-navigation-bar {
+        div {
+            > a {
+                font-weight: 500;
+                color: #595959;
+            }
+         } 
+    }
 }
 
 @keyframes octocat-wave {
