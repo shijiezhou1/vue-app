@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="consociation">
         <main>
             <section v-for="item in items" :key="item.msg">
                 <a :href="item.url" target="_blank">
@@ -31,37 +31,40 @@ export default {
 </script>
 
 <style lang="scss" scoped="scoped">
-main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-}
-@media (min-width: 620px) {
+
+#consociation{
     main {
-        column-count: 2;
-    }
-
-    section {
-        break-inside: avoid;
-    }
-}
-
-@media (min-width: 960px) {
-    main {
-        column-count: 3;
-    }
-}
-
-section {
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
-    .section-img {
-        display: block;
-        padding: 10px;
+        max-width: 700px;
         margin: 0 auto;
-        width: 200px;
-        height: 200px;
+        padding: 20px;
+    }
+    @media (min-width: 620px) {
+        main {
+            column-count: 2;
+        }
+    
+        section {
+            break-inside: avoid;
+        }
+    }
+    
+    @media (min-width: 960px) {
+        main {
+            column-count: 3;
+        }
+    }
+    
+    section {
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        .section-img {
+            display: block;
+            padding: 10px;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
     }
 }
 </style>

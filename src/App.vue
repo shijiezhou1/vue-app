@@ -209,7 +209,7 @@ export default {
                 font-weight: 500;
                 color: #595959;
             }
-         } 
+        }
     }
 }
 
