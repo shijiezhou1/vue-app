@@ -7,7 +7,7 @@
       occupation="Ancient Roman philosopher"
     ></BlockQuoteContent>
 
-    <v-form ref="form">
+    <v-form class="emailform" ref="form">
       <v-row class="d-flex justify-center">
         <v-col lg="6" md="6" sm="12">
           <v-text-field
@@ -106,13 +106,18 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped="scoped">
+<style lang="scss">
 #contact {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: hidden;
+
+   .emailform {
+        margin: 10px;
+    }
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
