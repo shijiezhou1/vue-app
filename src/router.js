@@ -60,6 +60,11 @@ export default new Router( {
         path: '/collection',
         name: 'colelction',
         component: views.Collection
+    },
+    {
+      path: '/exclusive',
+      name: 'exclusive',
+      component: views.Exclusive
     }
   ]
 } )

@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
     #article {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -32,22 +32,30 @@ export default {
         
         .article_content {
             width: 50%;
-            margin: 0 10px;
+            margin: 0 auto;
             text-align: left;
             
+            img {
+                width: 100%;
+            }
+
             & * {
               width: 100%;
               word-break: break-word;
             }
+            
         }
         
-        @media (max-width: 992px) {
+        @media (max-width: 576px) {
             .article_content {
                 width: 96%;
-                margin: 0 10px;
+                margin: 0 auto;
                 text-align: left;
+                > img {
+                    border: 1px solid black;
+                    width: 100%;
+                }
             }
-            
         }
     }
     

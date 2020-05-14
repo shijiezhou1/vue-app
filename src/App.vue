@@ -84,7 +84,7 @@ export default {
                             {
                                 type: 'link',
                                 text: 'Exclusive',
-                                path: './reception',
+                                path: './exclusive',
                                 iconLeft: '<i class="fa fa-superpowers" aria-hidden="true"></i>'
                             }
                         ]
@@ -205,9 +205,19 @@ export default {
     // ONLY FOR VUE NAVIGATION BAR
     #vue-navigation-bar {
         div {
+            > .vnb__popup__bottom ul li a {
+                color: #595959;
+                font-weight: 500;
+            }
             > a {
                 font-weight: 500;
                 color: #595959;
+            }
+
+            > div.vnb__popup__bottom ul li a:hover {
+                    text-decoration: none;
+                    background: #f3f3f3;
+                    border-left: 2px solid #007aff;
             }
         }
     }
