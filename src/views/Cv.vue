@@ -23,7 +23,7 @@
   export default {
     components: {
       pdf: pdfvuer,
-      Loading: Loading
+      Loading
     },
     data() {
       return {

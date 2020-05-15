@@ -7,7 +7,7 @@
                     <h4 class="post-category">{{ category }}</h4>
                     <h3 class="post-title">{{ name }}</h3>
                     <p class="post-description">{{ desc }}</p>
-                    <p class="post-author">By {{ author }}</p>
+                    <p class="post-author">{{date}} by {{formatName}} </p>
                 </div>
             </article>
         </a>
@@ -23,12 +23,19 @@ export default {
         image: null,
         author: null,
         desc: null,
-        link: null
+        link: null,
+        date: null,
     },
     computed: {
         source() {
             const regex = /src=\"([^"]+)\"/;
             return this.image.match(regex)[1] || 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg';
+        },
+        formatName(){
+            if(this.author === "Jay Chow") {
+                return "Shijie Zhou";
+            }
+            return this.author;
         }
     }
 };
