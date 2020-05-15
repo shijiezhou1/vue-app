@@ -8,6 +8,7 @@
                 :author="cont.creator"
                 :desc="cont.contentSnippet"
                 :link="cont.link"
+                :date="cont.pubDate"
             />
         </div>
     </div>
@@ -21,12 +22,6 @@ export default {
     },
     props: {
         contents: {}
-    },
-    created() {
-        console.log('contents will update, as this.property is now reactive.', this.contents);
-    },
-    mounted() {
-        console.log('mounted contents:', this.contents);
     },
     computed: {
         contentsComputed() {
