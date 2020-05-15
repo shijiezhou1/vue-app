@@ -84,7 +84,7 @@ export default {
                             {
                                 type: 'link',
                                 text: 'Exclusive',
-                                path: './reception',
+                                path: './exclusive',
                                 iconLeft: '<i class="fa fa-superpowers" aria-hidden="true"></i>'
                             }
                         ]
