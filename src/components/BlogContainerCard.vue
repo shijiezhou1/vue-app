@@ -4,7 +4,7 @@
             <article class="blog-card">
                 <img class="post-image" :src="source" />
                 <div class="article-details">
-                    <h4 class="post-category">{{ category }}</h4>
+                    <div class="post-category" v-for="ca in category" :key="ca">{{ ca }},</div>
                     <h3 class="post-title">{{ name }}</h3>
                     <p class="post-description">{{ desc }}</p>
                     <p class="post-author">{{date}} by {{formatName}} </p>
@@ -102,15 +102,21 @@ export default {
     }
 
     .post-category {
-        display: inline-block;
+        display: inline;
         text-transform: uppercase;
-        font-size: 0.75rem;
+        font-size: 10px;
         font-weight: 700;
-        line-height: 1;
-        letter-spacing: 0.0625rem;
-        margin: 0 0 0.75rem 0;
-        padding: 0 0 0.25rem 0;
-        border-bottom: 0.125rem solid $border;
+        margin: 0 2px 0 0;
+        border-bottom: 0.125rem solid #ebebeb;
+        // display: inline-block;
+        // text-transform: uppercase;
+        // font-size: 0.75rem;
+        // font-weight: 700;
+        // line-height: 1;
+        // letter-spacing: 0.0625rem;
+        // margin: 0 0 0.75rem 0;
+        // padding: 0 0 0.25rem 0;
+        // border-bottom: 0.125rem solid $border;
     }
 
     .post-title {
