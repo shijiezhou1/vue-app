@@ -30,40 +30,48 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped="scoped">
-
+<style lang="scss">
 #consociation{
     main {
         max-width: 700px;
         margin: 0 auto;
         padding: 20px;
     }
+
+    section {
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        & .section-img {
+            display: block;
+            padding: 10px;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 620px) {
+        main {
+            column-count: 2;
+            section {
+                & .section-img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
     @media (min-width: 620px) {
         main {
             column-count: 2;
-        }
-    
-        section {
-            break-inside: avoid;
         }
     }
     
     @media (min-width: 960px) {
         main {
             column-count: 3;
-        }
-    }
-    
-    section {
-        margin-bottom: 10px;
-        overflow: hidden;
-        position: relative;
-        .section-img {
-            display: block;
-            padding: 10px;
-            margin: 0 auto;
-            width: 200px;
-            height: 200px;
         }
     }
 }

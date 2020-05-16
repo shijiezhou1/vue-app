@@ -10,9 +10,7 @@
         <div class="flex-container">
             <img class="profile" :src="profileImage" alt="profileImage" />
             <p>{{ profileDescription }}</p>
-            <!-- Prepare a container for your calendar. -->
             <div class="calendar">
-                <!-- Loading stuff -->
                 Loading the data just for you.
             </div>
         </div>
@@ -26,12 +24,10 @@
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import GitHubCalendar from 'github-calendar';
 import AboutCard from "../components/AboutCard.vue"
-import axios from 'axios';
 
 export default {
     components: { BlockQuoteContent, AboutCard },
     data: () => ({
-        title: "父 刚开始的值",
         profileImage: require('@/assets/profile/profile.jpg'),
         profileDescription: `Shijie Zhou studies at University of California, San Diego in the Interdisciplinary Computer in Arts. He is also the member for design and construct web developer at the Worldview project organization. Currently, he is working in Akirix(MMSG department) with software engineer.
 
@@ -40,45 +36,16 @@ He gained experience in media use and computer art. He also familiar with web de
     }),
     mounted() {
         GitHubCalendar('.calendar', 'shijiezhou1');
-        // or enable responsive functionality
         GitHubCalendar('.calendar', 'shijiezhou1', { responsive: true });
-
-        // axios
-        //     .get('localhost:1234/random/5')
-        //     .then(function(response) {
-        //         // handle success
-        //         console.log('1234', response);
-        //     })
-        //     .catch(function(error) {
-        //         // handle error
-        //         console.log(error);
-        //     });
-
-        // axios
-        //     .get('localhost:3000/random/5')
-        //     .then(function(response) {
-        //         // handle success
-        //         console.log('3000', response);
-        //     })
-        //     .catch(function(error) {
-        //         // handle error
-        //         console.log(error);
-        //     });
     }, 
     methods: {
-        updateTitle(e){
-          this.title = e;
-        },
-        reset() {
-            this.title = '父 刚开始的值'
-        }
+       
     }
 };
 </script>
 
 <style lang="scss">
 #about {
-    //TODO fix scoped later
     @import '@/assets/styles/github-calendar-responsive.scss';
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -95,7 +62,7 @@ He gained experience in media use and computer art. He also familiar with web de
     }
 
     .flex-container {
-        overflow: auto;
+        overflow-x: hidden;
         margin: 10px auto;
         // Small devices (landscape phones, 576px and up)
         @media (min-width: 576px) {
