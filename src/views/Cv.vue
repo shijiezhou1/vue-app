@@ -45,7 +45,7 @@
       this.isLoading = true;
       this.getPdf();
     },
-    
+
     watch: {
       show: function ( s ) {
         if ( s ) {
@@ -65,7 +65,7 @@
     methods: {
       getPdf() {
         var self = this;
-        self.pdfdata = pdfvuer.createLoadingTask( './pdf/resume.pdf' );
+        self.pdfdata = pdfvuer.createLoadingTask( '/pdf/resume.pdf' );
         self.pdfdata.then( pdf => {
           this.isLoading = false;
           self.numPages = pdf.numPages;

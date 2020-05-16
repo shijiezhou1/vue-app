@@ -11,13 +11,20 @@ import vuetify from '@/plugins/vuetify' // path to vuetify export
 // STORE
 import store from './stores/store'
 
-// SOCKET IO 
+// SOCKET IO
 import VueSocketIO from 'vue-socket.io'
 import Toasted from 'vue-toasted';
 
 // LAZY LOADING IMAGE
 import VueLazyload from 'vue-lazyload'
 
+// Vue analytics
+import VueAnalytics from 'vue-analytics';
+
+Vue.use(VueAnalytics, {
+  id: 'UA-149847604-1',
+  router
+})
 
 Vue.use(Toasted)
 Vue.use(VueLazyload, {
