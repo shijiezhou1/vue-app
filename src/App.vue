@@ -62,33 +62,33 @@ export default {
                 ariaLabelMainNav: 'Main Navigation',
                 tooltipAnimationType: 'shift-away',
                 menuOptionsRight: [
-                    {
-                        type: 'link',
-                        text: 'Projects',
-                        subMenuOptions: [
-                            {
-                                type: 'link',
-                                text: 'Expedition',
-                                path: './project',
-                                iconLeft: '<i class="fa fa-user fa-fw"></i>'
-                            },
-                            {
-                                type: 'link',
-                                text: 'Collection',
-                                path: './collection',
-                                iconLeft: '<i class="fa fa-star fa-fw"></i>'
-                            },
-                            {
-                                type: 'hr'
-                            },
-                            {
-                                type: 'link',
-                                text: 'Exclusive',
-                                path: './exclusive',
-                                iconLeft: '<i class="fa fa-superpowers" aria-hidden="true"></i>'
-                            }
-                        ]
-                    },
+                    // {
+                    //     type: 'link',
+                    //     text: 'Projects',
+                    //     subMenuOptions: [
+                    //         {
+                    //             type: 'link',
+                    //             text: 'Expedition',
+                    //             path: './project',
+                    //             iconLeft: '<i class="fa fa-user fa-fw"></i>'
+                    //         },
+                    //         {
+                    //             type: 'link',
+                    //             text: 'Collection',
+                    //             path: './collection',
+                    //             iconLeft: '<i class="fa fa-star fa-fw"></i>'
+                    //         },
+                    //         {
+                    //             type: 'hr'
+                    //         },
+                    //         {
+                    //             type: 'link',
+                    //             text: 'Exclusive',
+                    //             path: './exclusive',
+                    //             iconLeft: '<i class="fa fa-superpowers" aria-hidden="true"></i>'
+                    //         }
+                    //     ]
+                    // },
                     {
                         type: 'link',
                         text: 'About',
