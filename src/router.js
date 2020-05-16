@@ -32,9 +32,9 @@ export default new Router( {
       component: views.About
     },
     {
-      path: '/project',
-      name: 'project',
-      component: views.Project
+      path: '/expedition',
+      name: 'expedition',
+      component: views.Expedition
     },
     {
       path: '/cv',

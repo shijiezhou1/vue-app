@@ -7,6 +7,8 @@
       occupation="French writer, poet, aristocrat, journalist and pioneering aviator"
     ></BlockQuoteContent>
 
+    <br />
+
     <v-carousel
       cycle
       height="400"
@@ -20,7 +22,7 @@
         reverse-transition="fade-transition"
         transition="fade-transition"
       >
-      
+
         <!-- DO NOT DELETE BELOW -->
         <!-- <v-sheet
           :color="colors[i]"
@@ -31,8 +33,8 @@
             align="center"
             justify="center"
           > -->
-            <!-- <div class="display-3">{{ slide }} Slide</div> -->
-          <!-- </v-row> -->
+        <!-- <div class="display-3">{{ slide }} Slide</div> -->
+        <!-- </v-row> -->
         <!-- </v-sheet> -->
       </v-carousel-item>
     </v-carousel>
@@ -54,11 +56,12 @@ export default {
         "red lighten-1",
         "deep-purple accent-4"
       ],
-      slides: [{src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"},
-              {src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"},
-              {src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"},
-              {src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg"},
-              {src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"},
+      slides: [
+        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection1.jpg" },
+        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection2.jpg" },
+        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection3.jpg" },
+        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection4.jpg" },
+        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection5.jpg" },
       ]
     };
   }
