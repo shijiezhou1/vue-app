@@ -57,7 +57,7 @@ export default {
   },
   components: {
     SocialMedia,
-    BlockQuoteContent
+    BlockQuoteContent,
   },
   methods: {
     subscribe() {

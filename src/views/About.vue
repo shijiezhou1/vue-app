@@ -38,9 +38,9 @@ He gained experience in media use and computer art. He also familiar with web de
     mounted() {
         GitHubCalendar('.calendar', 'shijiezhou1');
         GitHubCalendar('.calendar', 'shijiezhou1', { responsive: true });
-    }, 
+    },
     methods: {
-       
+
     }
 };
 </script>
@@ -69,7 +69,7 @@ He gained experience in media use and computer art. He also familiar with web de
         @media (min-width: 576px) {
             width: 100%;
         }
-        
+
         // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) {
             max-width: 50%;
