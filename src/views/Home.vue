@@ -53,7 +53,10 @@ export default {
             title: "Home | 🧩",
             data: data
         };
-    }
+    },
+    mounted() {
+      this.$ga.page('/home');
+    },
     // mounted() {
     //     const options = {
     //         valueNames: ['name', 'city']
