@@ -3,11 +3,11 @@
         <main>
             <section v-for="item in items" :key="item.msg">
                 <a :href="item.url" target="_blank">
-                    <img 
-                    :id="item.msg" 
-                    class="section-img profile" 
+                    <img
+                    :id="item.msg"
+                    class="section-img profile"
                     v-lazy="require('@/assets' + item.img)"
-                    src="item.img" 
+                    src="item.img"
                     alt="image" />
                 </a>
             </section>
@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="scoped">
 #consociation{
     main {
         max-width: 700px;
@@ -68,7 +68,7 @@ export default {
             column-count: 2;
         }
     }
-    
+
     @media (min-width: 960px) {
         main {
             column-count: 3;

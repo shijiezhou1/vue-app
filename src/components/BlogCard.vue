@@ -37,7 +37,7 @@ export default {
 #BlogCard {
   margin: 10px auto;
   width: 100%;
-  
+
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {
     width: 80%;
