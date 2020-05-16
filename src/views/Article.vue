@@ -52,7 +52,6 @@ export default {
                 margin: 0 auto;
                 text-align: left;
                 > img {
-                    border: 1px solid black;
                     width: 100%;
                 }
             }
