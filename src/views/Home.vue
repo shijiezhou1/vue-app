@@ -28,10 +28,10 @@
         </ul>
         <button @click="sort()">sort</button>
     </div> -->
-    
+
     <div id="home">
         <title>{{title}}</title>
-        <Prometheus />
+        <Prometheus :items="data" />
         <!-- <BlogContainer :contents="this.mediumData" /> -->
     </div>
 </template>
@@ -39,10 +39,9 @@
 <script>
 // let hackerList;
 import axios from 'axios';
-
 import Prometheus from "../components/Prometheus";
-
 import BlogContainer from '../components/BlogContainer.vue';
+import data from "../assets/data.json"
 
 export default {
     components: {
@@ -52,8 +51,9 @@ export default {
     data: function() {
         return {
             title: "Home | 🧩",
+            data: data
         };
-    },
+    }
     // mounted() {
     //     const options = {
     //         valueNames: ['name', 'city']

@@ -65,3 +65,21 @@ https://raw.githubusercontent.com/shijiezhou1/Artemis/master/img/xxx.png
 ```
 https://vuejsexamples.com/
 ```
+
+### JSON String Escape
+
+```
+https://www.freeformatter.com/json-escape.html#ad-output
+```
+
+### Permission list
+
+```
+default-src *  data: blob: filesystem: about: ws: wss: 'unsafe-inline' 'unsafe-eval' 'unsafe-dynamic'; 
+script-src * data: blob: 'unsafe-inline' 'unsafe-eval'; 
+connect-src * data: blob: 'unsafe-inline'; 
+img-src * data: blob: 'unsafe-inline'; 
+frame-src * data: blob: ; 
+style-src * data: blob: 'unsafe-inline';
+font-src * data: blob: 'unsafe-inline';
+```

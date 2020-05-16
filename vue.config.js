@@ -1,10 +1,9 @@
 module.exports = {
     filenameHashing: true,
     outputDir: 'dist',
-    publicPath: process.env.NODE_ENV === 'production'
-        ? '/vue-app/'
-        : '/',
-    lintOnSave: process.env.NODE_ENV !== 'production',
+    // publicPath: process.env.NODE_ENV === 'production'
+    //     ? '/'
+    //     : '/vue-app/',
     pages: {
         index: {
             // entry for the page
