@@ -14,11 +14,16 @@ export default {
             title: 'Article | 🏖'
         };
     },
-    beforeRouteEnter: (to, from, next) => {
-        console.log({to});
-        console.log({from});
-        next();
+    created() {
+        if(this.msg === undefined || this.html === undefined){
+            this.$router.push({ name: 'home' })
+        }
     }
+    // beforeRouteEnter: (to, from, next) => {
+    //     // console.log({to});
+    //     console.log({from});
+    //     next();
+    // }
 };
 </script>
 
