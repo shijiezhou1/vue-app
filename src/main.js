@@ -69,7 +69,7 @@ Vue.toasted.register('appInfo',
 // Now setup our socket and vuex configuration
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'http://localhost:8000', //TODO setup environment variable.
+  connection: "https://shijiezhou.herokuapp.com", // 'http://localhost:8000', //TODO setup environment variable.
   vuex: {
     store,
     actionPrefix: 'SOCKET_'
