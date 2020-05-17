@@ -7,8 +7,7 @@
       author="Walt Disney"
       occupation="Entrepreneur, Animator, Writer, Voice actor and Film Producer."
     ></BlockQuoteContent>
-
-    <Prometheus :items="data" />
+    <Prometheus :items="allArticle.default" />
   </div>
 </template>
 
@@ -16,8 +15,7 @@
 
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import Prometheus from "../components/Prometheus";
-import data from '../assets/data.json';
-import data2 from '../assets/data2.json';
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   components:{
@@ -27,7 +25,16 @@ export default {
   data() {
     return {
       title: "🔥｜ Expedition",
-      data: data.concat(data2)
+    }
+  },
+  computed: mapGetters(["allArticle"]),
+  methods: {
+      ...mapActions(['fetchArticles'])
+  },
+  mounted() {
+    if(this.$store.getters.allArticle.length === 0 ) {
+      // reload if it is empty
+      this.fetchArticles();
     }
   }
 };
