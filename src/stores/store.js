@@ -33,7 +33,21 @@ export default new Vuex.Store({
       }).goAway(1200);
     },
     "SOCKET_success"(state, server) {
-      console.log('B')
+      console.log(`
+                    +++++++
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+       +++++++      @@@@@
+        @@@@@      @@@@@
+          @@@@@ @@@@@
+             @@@@@
+            .......
+      `)
       // Vue.toasted.global.appSuccess({
       //   message: server.message
       // }).goAway(1200);
