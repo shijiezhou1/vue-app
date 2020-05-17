@@ -41,7 +41,8 @@
 import axios from 'axios';
 import Prometheus from "../components/Prometheus";
 import BlogContainer from '../components/BlogContainer.vue';
-import data from "../assets/data.json"
+import data from "../assets/data.json";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
     components: {
@@ -57,6 +58,13 @@ export default {
     mounted() {
       this.$ga.page('/home');
     },
+    methods: {
+      ...mapActions(['fetchArticles', 'fetchMediums'])
+    },
+    created() {
+      this.fetchMediums();
+      this.fetchArticles();
+    }
     // mounted() {
     //     const options = {
     //         valueNames: ['name', 'city']

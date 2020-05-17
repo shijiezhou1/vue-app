@@ -4,6 +4,8 @@ import * as user from './modules/user.js'
 import * as event from './modules/event.js'
 import * as notification from './modules/notification.js'
 import * as post from './modules/post.js'
+import articles from './modules/articles.js'
+import mediums from './modules/mediums.js'
 
 Vue.use(Vuex)
 
@@ -12,7 +14,9 @@ export default new Vuex.Store({
     user,
     event,
     notification,
-    post
+    post,
+    articles,
+    mediums
   },
   state: {
     categories: [
@@ -33,10 +37,24 @@ export default new Vuex.Store({
       }).goAway(1200);
     },
     "SOCKET_success"(state, server) {
-      console.log('B')
-      Vue.toasted.global.appSuccess({
-        message: server.message
-      }).goAway(1200);
+      console.log(`
+                    +++++++
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+                     @@@@
+       +++++++      @@@@@
+        @@@@@      @@@@@
+          @@@@@ @@@@@
+             @@@@@
+            .......
+      `)
+      // Vue.toasted.global.appSuccess({
+      //   message: server.message
+      // }).goAway(1200);
     },
     "SOCKET_info"(state, server) {
       console.log('C')
