@@ -34,9 +34,9 @@ export default new Vuex.Store({
     },
     "SOCKET_success"(state, server) {
       console.log('B')
-      Vue.toasted.global.appSuccess({
-        message: server.message
-      }).goAway(1200);
+      // Vue.toasted.global.appSuccess({
+      //   message: server.message
+      // }).goAway(1200);
     },
     "SOCKET_info"(state, server) {
       console.log('C')
