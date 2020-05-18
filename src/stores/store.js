@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import * as user from './modules/user.js'
 import * as event from './modules/event.js'
 import * as notification from './modules/notification.js'
-import post from './modules/post.js'
+import * as post from './modules/post.js'
 import articles from './modules/articles.js'
 import mediums from './modules/mediums.js'
 
