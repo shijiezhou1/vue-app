@@ -36,16 +36,6 @@ export default {
       // reload if it is empty
       this.fetchArticles();
     }
-  },
-  computed: mapGetters(["allArticle"]),
-  methods: {
-      ...mapActions(['fetchArticles'])
-  },
-  mounted() {
-    if(this.$store.getters.allArticle.length === 0 ) {
-      // reload if it is empty
-      this.fetchArticles();
-    }
   }
 };
 </script>
