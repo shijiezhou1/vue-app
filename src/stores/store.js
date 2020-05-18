@@ -5,6 +5,7 @@ import * as event from './modules/event.js'
 import * as notification from './modules/notification.js'
 import post from './modules/post.js'
 import articles from './modules/articles.js'
+import mediums from './modules/mediums.js'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,8 @@ export default new Vuex.Store({
     event,
     notification,
     post,
-    articles
+    articles,
+    mediums
   },
   state: {
     categories: [

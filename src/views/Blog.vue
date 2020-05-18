@@ -1,7 +1,7 @@
 <template>
   <div id="blog">
     <title>{{Blog}}</title>
-  
+
     <loading
       class="vld-overlay"
       :active.sync="isLoading"
@@ -10,7 +10,7 @@
       :width=200
       :height=200
     ></loading>
-    
+
     <h1>Blog</h1>
     <BlockQuoteContent
       content="Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."
@@ -18,15 +18,15 @@
       occupation="Theoretical Physicist"
     ></BlockQuoteContent>
 
-    <BlogContainer :contents="mediumData" />
+    <BlogContainer :contents="allMedium" />
   </div>
 </template>
 <script>
 
-import axios from "axios";
 import BlogContainer from '../components/BlogContainer.vue';
 import Loading from 'vue-loading-overlay';
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
@@ -42,18 +42,14 @@ export default {
       fullPage: true,
     }
   },
+  computed: mapGetters(["allMedium"]),
+  methods: {
+      ...mapActions(['fetchMediums'])
+  },
   created() {
-    this.isLoading = true;
-    const self = this;
-    axios
-      .get('https://shijiezhou.herokuapp.com/medium')
-      .then(function (response) {
-        self.mediumData = response.data;
-        self.isLoading = false;
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    if(this.$store.getters.allMedium.length === 0) {
+      this.fetchMediums();
+    }
   }
 }
 </script>

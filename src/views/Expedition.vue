@@ -16,6 +16,7 @@
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import Prometheus from "../components/Prometheus";
 import { mapGetters, mapActions } from "vuex";
+
 export default {
   components:{
      Prometheus,
@@ -24,15 +25,17 @@ export default {
   data() {
     return {
       title: "🔥｜ Expedition",
-      // data: data.concat(data2)
     }
   },
-  methods: {
-    ...mapActions(['fetchArticles'])
-  },
   computed: mapGetters(["allArticle"]),
-  created() {
-    this.fetchArticles();
+  methods: {
+      ...mapActions(['fetchArticles'])
+  },
+  mounted() {
+    if(this.$store.getters.allArticle.length === 0 ) {
+      // reload if it is empty
+      this.fetchArticles();
+    }
   }
 };
 </script>
