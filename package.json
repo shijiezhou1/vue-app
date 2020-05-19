@@ -30,7 +30,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@mdi/js": "^5.2.45",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
     "deepmerge": "^4.2.2",

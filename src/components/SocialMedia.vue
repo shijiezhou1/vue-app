@@ -1,61 +1,55 @@
 <template>
   <div>
-    <v-btn
+    <v-btn v-for="so in social" :key="so"
       fab
       icon
-      v-on:click="oLink('https://gitlab.com/shijiezhou1')"
-      color="orange"
+      v-on:click="oLink(so.url)"
+      :color="so.color"
     >
-      <v-icon>{{svgObj.gitlab}}</v-icon>
+      <v-icon>{{so.name}}</v-icon>
     </v-btn>
-    <v-btn
-      fab
-      icon
-      v-on:click="oLink('https://www.linkedin.com/in/shijiezhou1/')"
-      color="blue"
-    >
-      <v-icon>{{svgObj.linkedin}}</v-icon>
-    </v-btn>
-    <v-btn
-      fab
-      icon
-      v-on:click="oLink('https://github.com/shijiezhou1')"
-      color="black"
-    >
-      <v-icon>{{svgObj.github}}</v-icon>
-    </v-btn>
-    <v-btn
-      fab
-      icon
-      v-on:click="oLink('https://twitter.com/ShijieZhou5')"
-      color="blue"
-    >
-      <v-icon>{{svgObj.twitter}}</v-icon>
-    </v-btn>
-    <v-btn
-      fab
-      icon
-      v-on:click="oLink('https://stackoverflow.com/users/10401645/software-engineer')"
-      color="orange"
-    >
-      <v-icon>{{svgObj.stackoverflow}}</v-icon>
-    </v-btn>
+
   </div>
 </template>
 
 <script>
-import { mdiGithub, mdiLinkedin, mdiTwitter, mdiStackOverflow, mdiGitlab } from '@mdi/js'
 
 export default {
   data() {
     return {
-      svgObj: {
-        github: mdiGithub,
-        gitlab: mdiGitlab,
-        linkedin: mdiLinkedin,
-        twitter: mdiTwitter,
-        stackoverflow: mdiStackOverflow,
-      },
+      // TODO: using short url
+      social: [
+        {
+          name: 'fab fa-gitlab',
+          url: 'https://gitlab.com/shijiezhou1',
+          color: 'deep-orange'
+        },
+        {
+          name: 'fab fa-linkedin',
+          url: 'https://www.linkedin.com/in/shijiezhou1/',
+          color: 'blue darken-2'
+        },
+        {
+          name: 'fab fa-github',
+          url: 'https://github.com/shijiezhou1',
+          color: 'black'
+        },
+        {
+          name: 'fab fa-twitter',
+          url: 'https://twitter.com/ShijieZhou5',
+          color: 'blue'
+        },
+        {
+          name: 'fab fa-stack-overflow',
+          url: 'https://stackoverflow.com/users/10401645',
+          color: 'orange'
+        },
+        {
+          name: 'fab fa-tumblr-square',
+          url: 'https://shijiezhou.tumblr.com/',
+          color: 'grey darken-3'
+        },
+      ]
     }
   },
   methods: {
