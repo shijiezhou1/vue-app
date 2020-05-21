@@ -9,7 +9,6 @@ export default new Router( {
     {
       path: '*',
       name: '404',
-      // redirect: { name: '404' }
       component: views.NotFound,
       props: ( route ) => {
         return {resource: route.path}
