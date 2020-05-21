@@ -1,23 +1,22 @@
 <template>
   <div id="exclusive">
-      <h1></h1>
-      <v-img
-        :src="`https://picsum.photos/200/1800?random`"
-        :lazy-src="`https://picsum.photos/2/18?random`"
-        aspect-ratio="1"
-        class="grey lighten-2"
-      >
-        <template v-slot:placeholder>
-          <v-row
-            class="fill-height ma-0"
-            align="center"
-            justify="center"
-          >
-            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-          </v-row>
-        </template>
-      </v-img>
-</div>
+    <h1></h1>
+    <section>
+      <div class="fluid-container">
+        <video
+          autoplay
+          src="https://assets.mixkit.co/videos/preview/mixkit-bright-orange-sunset-on-beach-2168-large.mp4"
+          muted
+          loop
+        >
+        </video>
+      </div>
+
+      <div class="textInfo">
+        <p>Shoot for the beach from Mixkit</p>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -26,6 +25,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  .fluid-container{
+    video {
+      width: 100%;
+    }
+  }
 </style>
