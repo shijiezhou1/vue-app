@@ -1,31 +1,40 @@
 <template>
   <div id="consociation">
-    <v-container grid-list-xl>
-      <v-layout
-        row
-        justify-center
-        align-center
-        wrap
-        class="mt-4 pt-2"
-      >
-        <div
+     <v-container fluid>
+       <v-row class="align-center my-5">
+      <div
           v-for="item in items"
           :key="item.msg"
+          class="mx-auto mb-5"
         >
-          <a
-            :href="item.url"
-            target="_blank"
+        <a
+          :href="item.url"
+          target="_blank"
+        >
+      <v-img
+        :src="require('@/assets' + item.img)"
+        :lazy-src="require('@/assets' + item.img)"
+        aspect-ratio="1"
+        eager
+        width="12rem"
+        height = "12rem"
+        :alt="item.msg"
+      >
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
           >
-            <img
-              :id="item.msg"
-              class="section-img profile"
-              v-lazy="require('@/assets' + item.img)"
-              src="item.img"
-              alt="image"
-            />
-          </a>
-        </div>
-      </v-layout>
+            <v-progress-circular indeterminate color="grey lighten-5">
+            </v-progress-circular>
+          </v-row>
+        </template>
+      </v-img>
+      </a>
+      </div>
+
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -51,20 +60,5 @@ export default {
   max-width: 700px;
   margin: 0 auto;
   padding: 0px;
-
-  img {
-    display: block;
-    padding: 10px;
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-  }
-
-  @media only screen and (max-width: 620px) {
-    img {
-      width: 150px;
-      height: 150px;
-    }
-  }
 }
 </style>
