@@ -7,7 +7,9 @@
       <article class="blog-card">
         <img
           class="post-image"
-          :src="source"
+          :key="source"
+          v-lazy="source"
+          :alt="source"
         />
         <div class="article-details">
           <v-chip-group

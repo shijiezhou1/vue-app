@@ -10,9 +10,7 @@
         <div class="flex-container">
             <img class="profile" :src="profileImage" alt="profileImage" />
             <p>{{ profileDescription }}</p>
-            <div class="calendar">
-                Loading the data just for you.
-            </div>
+            <div class="calendar">Loading the data just for you.</div>
         </div>
         <!-- <h2>{{title}}</h2> -->
         <!-- <button @click="reset">Reset</button> -->
