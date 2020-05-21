@@ -17,6 +17,7 @@
     >
       <v-carousel-item
         v-for="(slide, i) in slides"
+        eager
         :key="i"
         :src="slide.src"
         reverse-transition="fade-transition"
@@ -57,11 +58,11 @@ export default {
         "deep-purple accent-4"
       ],
       slides: [
-        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection1.jpg" },
-        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection2.jpg" },
-        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection3.jpg" },
-        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection4.jpg" },
-        { src: "https://cdn.jsdelivr.net/gh/shijiezhou1/Artemis@master/img/collection5.jpg" },
+        { src: process.env.VUE_APP_GITHUB_CDN+"img/collection1.jpg" },
+        { src: process.env.VUE_APP_GITHUB_CDN+"img/collection2.jpg" },
+        { src: process.env.VUE_APP_GITHUB_CDN+"img/collection3.jpg" },
+        { src: process.env.VUE_APP_GITHUB_CDN+"img/collection4.jpg" },
+        { src: process.env.VUE_APP_GITHUB_CDN+"img/collection5.jpg" },
       ]
     };
   }

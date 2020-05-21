@@ -5,12 +5,11 @@
       :href="link"
     >
       <article class="blog-card">
-        <img
-          class="post-image"
-          :key="source"
-          v-lazy="source"
-          :alt="source"
-        />
+        <v-img
+            :lazy-src="source"
+            :src="source"
+            class="grey darken-4"
+        ></v-img>
         <div class="article-details">
           <v-chip-group
             active-class="primary--text"
@@ -105,17 +104,6 @@ export default {
       @include transition(color 0.3s ease);
       color: $red;
     }
-    &:hover .post-image {
-      @include transition(opacity 0.3s ease);
-      opacity: 0.9;
-    }
-  }
-
-  .post-image {
-    @include transition(opacity 0.3s ease);
-    display: block;
-    width: 100%;
-    object-fit: cover;
   }
 
   .article-details {
@@ -127,15 +115,6 @@ export default {
     font-size: 10px;
     font-weight: bold;
     margin: 0px 5px 2px 0px;
-    // display: inline-block;
-    // text-transform: uppercase;
-    // font-size: 0.75rem;
-    // font-weight: 700;
-    // line-height: 1;
-    // letter-spacing: 0.0625rem;
-    // margin: 0 0 0.75rem 0;
-    // padding: 0 0 0.25rem 0;
-    // border-bottom: 0.125rem solid $border;
   }
 
   .post-title {
@@ -178,10 +157,6 @@ export default {
       grid-area: main;
       align-self: center;
       justify-self: center;
-    }
-
-    .post-image {
-      height: 100%;
     }
 
     .blog-card {
