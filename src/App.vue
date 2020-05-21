@@ -87,7 +87,7 @@ export default {
                       type: 'link',
                       text: 'Exclusive',
                       path: './exclusive',
-                      iconLeft: '<i class="fa fa-superpowers" aria-hidden="true"></i>'
+                      iconLeft: '<i class="fas fa-air-freshener" aria-hidden="true"></i>'
                   }
               ]
           },
