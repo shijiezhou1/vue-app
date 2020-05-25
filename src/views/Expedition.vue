@@ -48,6 +48,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   background: linear-gradient(lightblue, pink);
-  height: 100vh;
+  min-height: 100vh;
 }
 </style>
