@@ -34,6 +34,7 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 // Lets Register a Global Toasts.
+// TODO: abstract out register
 Vue.toasted.register('appError',
   (payload) => {
     if (!payload.message) {
