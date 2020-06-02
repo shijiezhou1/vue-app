@@ -67,7 +67,7 @@ export default {
       this.status = 'mdi-check';
       this.isDisabled = true;
       console.log(this.email);
-      const url = process.env.VUE_APP_API;
+      const url = process.env.VUE_APP_API+"/subscribe";
       axios({
         method: 'POST',
         url: url,

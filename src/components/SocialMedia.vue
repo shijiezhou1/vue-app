@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn v-for="so in social" :key="so"
+    <v-btn v-for="so in social" :key="so.name"
       fab
       icon
       v-on:click="oLink(so.url)"
