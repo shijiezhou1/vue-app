@@ -64,9 +64,8 @@ export default {
       if (!this.$refs.form.validate()) {
         return;
       }
-      this.status = 'mdi-check';
+      const self = this;
       this.isDisabled = true;
-      console.log(this.email);
       const url = process.env.VUE_APP_API+"/subscribe";
       axios({
         method: 'POST',
@@ -75,7 +74,9 @@ export default {
         headers: { Accept: 'application/x-www-form-urlencoded' }
       })
         .then(function (response) {
-          console.log(response);
+          if(response.data.code === 200) {
+            self.status = "far fa-check-circle"
+          }
         })
         .catch(function (error) {
           console.log(error);
