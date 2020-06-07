@@ -51,7 +51,7 @@ export default {
     },
     data: function() {
         return {
-            title: "Home | 🧩",
+            title: "Home | Shijie Zhou",
             data: data
         };
     },
