@@ -49,8 +49,8 @@ export default {
   computed: {
     source() {
       const regex = /src=\"([^"]+)\"/;
-      // return 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg'
-      return this.image.match(regex)[1] || 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg';
+      // always check if the image is present before returning
+      return this.image ? this.image.match(regex)[1] : 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg';
     },
     formatName() {
       if (this.author === "Jay Chow") {
