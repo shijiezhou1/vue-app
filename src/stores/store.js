@@ -7,9 +7,13 @@ import * as post from './modules/post.js'
 import articles from './modules/articles.js'
 import mediums from './modules/mediums.js'
 
+// Vue persistable
+import createPersistedState from "vuex-persistedstate";
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  plugins: [createPersistedState()],
   modules: {
     user,
     event,

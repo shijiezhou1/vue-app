@@ -18,7 +18,7 @@
       occupation="Theoretical Physicist"
     ></BlockQuoteContent>
 
-    <BlogContainer :contents="allMedium" />
+    <BlogContainer :contents="mediumList" />
   </div>
 </template>
 <script>
@@ -26,7 +26,7 @@
 import BlogContainer from '../components/BlogContainer.vue';
 import Loading from 'vue-loading-overlay';
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
   components: {
@@ -43,7 +43,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["allMedium"])
+    ...mapState({
+      mediumList: state => state.mediums.mediums
+    }),
+    // ...mapGetters(["allMedium"])
   },
   methods: {
       ...mapActions(['fetchMediums'])

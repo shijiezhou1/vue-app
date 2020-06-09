@@ -6,8 +6,8 @@ const getters = { allMedium: state => state.mediums }
 
 const actions = {
   async fetchMediums({ commit }) {
-    const res = await get('/medium')
-    commit('setMediums', res.data);
+    const fetchData = await get('/medium')
+    commit('setMediums', fetchData.data);
   }
 }
 
