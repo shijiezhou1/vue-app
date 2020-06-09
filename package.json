@@ -16,6 +16,7 @@
     "github-calendar": "^2.1.1",
     "isotope-layout": "^3.0.6",
     "lodash": "^4.17.15",
+    "module": "^1.2.5",
     "pdfjs": "^2.3.7",
     "pdfvuer": "^1.6.0",
     "vue": "^2.6.11",
@@ -27,7 +28,8 @@
     "vue-socket.io": "^3.0.9",
     "vue-toasted": "^1.1.28",
     "vuetify": "^2.2.29",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "worker-loader": "^2.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",

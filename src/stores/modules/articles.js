@@ -1,4 +1,4 @@
-import axios from 'axios'
+import {get}from '../api/api'
 
 const state = {
   articles: []
@@ -10,7 +10,7 @@ const getters = {
 
 const actions = {
   async fetchArticles({commit}) {
-    const res = await axios.get(process.env.VUE_APP_API + '/articles')
+    const res = await get('/articles')
     commit('setArticles', res.data);
   },
 

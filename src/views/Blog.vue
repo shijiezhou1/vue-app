@@ -42,7 +42,9 @@ export default {
       fullPage: true,
     }
   },
-  computed: mapGetters(["allMedium"]),
+  computed: {
+    ...mapGetters(["allMedium"])
+  },
   methods: {
       ...mapActions(['fetchMediums'])
   },

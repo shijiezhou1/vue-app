@@ -1,12 +1,12 @@
-import axios from 'axios'
+import { get } from "../api/api";
 
-const state = { mediums: []}
+const state = { mediums: [] }
 
 const getters = { allMedium: state => state.mediums }
 
 const actions = {
-  async fetchMediums({commit}) {
-    const res = await axios.get(process.env.VUE_APP_API + '/medium')
+  async fetchMediums({ commit }) {
+    const res = await get('/medium')
     commit('setMediums', res.data);
   }
 }
