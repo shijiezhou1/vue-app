@@ -206,6 +206,8 @@ export default {
 
   // ONLY FOR VUE NAVIGATION BAR
   #vue-navigation-bar {
+    margin-left:10px;
+
     div {
       > .vnb__popup__bottom ul li a {
         color: #595959;
@@ -265,6 +267,14 @@ div .main-navbar-section {
     }
   }
   &__popup {
+    &__top{
+      &__close-button{
+        &__image{
+          max-height: 30px!important;
+          width: 30px;
+        }
+      }
+    }
     &__bottom {
       &__menu-options {
         &__option {

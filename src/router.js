@@ -1,6 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import * as views from "./views/index";
+
+// LAZY ROUTER
+const Home = () => import('@/views/Home');
+const Article = () => import('@/views/Article');
+const Blog = () => import('@/views/Blog');
+const NotFound = () => import('@/views/NotFound');
+const About = () => import('@/views/About');
+const Expedition = () => import('@/views/Expedition');
+const Cv = () => import('@/views/Cv');
+const Consoiation = () => import('@/views/Consociation');
+const Contact = () => import('@/views/Contact');
+const Collection = () => import('@/views/Collection')
+const Exclusive = () => import('@/views/Exclusive')
 
 Vue.use( Router );
 
@@ -9,7 +21,7 @@ export default new Router( {
     {
       path: '*',
       name: '404',
-      component: views.NotFound,
+      component: NotFound,
       props: ( route ) => {
         return {resource: route.path}
       }
@@ -17,63 +29,53 @@ export default new Router( {
     {
       path: '/',
       name: 'home',
-      component: views.Home,
-      meta: {keepAlive:false},
+      component: Home,
     },
     {
       path: '/article',
       name: 'article',
-      component: views.Article,
-      meta: {keepAlive:false},
+      component: Article,
       props: true
     },
     {
       path: '/about',
       name: 'about',
-      component: views.About,
-      meta: {keepAlive:false},
+      component: About,
     },
     {
       path: '/expedition',
       name: 'expedition',
-      component: views.Expedition,
-      meta: {keepAlive:false},
+      component: Expedition,
     },
     {
       path: '/cv',
       name: 'cv',
-      component: views.Cv,
-      meta: {keepAlive:false},
+      component: Cv,
     },
     {
       path: '/contact',
       name: 'contact',
-      component: views.Contact,
-      meta: {keepAlive:false},
+      component: Contact,
     },
     {
       path: '/consociation',
       name: 'consociation',
-      component: views.Consociation,
-      meta: {keepAlive:false},
+      component: Consoiation,
     },
      {
       path: '/blog',
       name: 'blog',
-      component: views.Blog,
-      meta: {keepAlive:false},
+      component: Blog,
     },
     {
         path: '/collection',
         name: 'colelction',
-        component: views.Collection,
-        meta: {keepAlive:false},
+        component: Collection,
     },
     {
       path: '/exclusive',
       name: 'exclusive',
-      component: views.Exclusive,
-      meta: {keepAlive:false},
+      component: Exclusive,
     }
   ]
 } )

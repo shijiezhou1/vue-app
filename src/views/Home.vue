@@ -37,8 +37,6 @@
 </template>
 
 <script>
-// let hackerList;
-import axios from 'axios';
 import Prometheus from "../components/Prometheus";
 import BlogContainer from '../components/BlogContainer.vue';
 import data from "../assets/data.json";
