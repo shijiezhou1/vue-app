@@ -9,7 +9,7 @@ export default new Router( {
     {
       path: '*',
       name: '404',
-      component: NotFound,
+      component: views.NotFound,
       props: ( route ) => {
         return {resource: route.path}
       }
