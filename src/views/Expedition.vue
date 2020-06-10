@@ -7,7 +7,7 @@
       author="Walt Disney"
       occupation="Entrepreneur, Animator, Writer, Voice actor and Film Producer."
     ></BlockQuoteContent>
-    <Prometheus :items="allArticle.default" />
+    <Prometheus :items="allArticle" />
   </div>
 </template>
 
