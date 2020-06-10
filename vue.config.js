@@ -1,5 +1,6 @@
 
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   filenameHashing: true,
@@ -34,5 +35,8 @@ module.exports = {
         "@": path.resolve(__dirname, "src"),
       },
     },
+    plugins: [
+
+    ],
   },
 }

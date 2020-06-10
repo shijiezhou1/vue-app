@@ -1,18 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-// LAZY ROUTER
-const Home = () => import('@/views/Home');
-const Article = () => import('@/views/Article');
-const Blog = () => import('@/views/Blog');
-const NotFound = () => import('@/views/NotFound');
-const About = () => import('@/views/About');
-const Expedition = () => import('@/views/Expedition');
-const Cv = () => import('@/views/Cv');
-const Consoiation = () => import('@/views/Consociation');
-const Contact = () => import('@/views/Contact');
-const Collection = () => import('@/views/Collection')
-const Exclusive = () => import('@/views/Exclusive')
+import * as views from "./views/index";
 
 Vue.use( Router );
 
@@ -29,53 +17,53 @@ export default new Router( {
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: views.Home,
     },
     {
       path: '/article',
       name: 'article',
-      component: Article,
+      component: views.Article,
       props: true
     },
     {
       path: '/about',
       name: 'about',
-      component: About,
+      component: views.About,
     },
     {
       path: '/expedition',
       name: 'expedition',
-      component: Expedition,
+      component: views.Expedition,
     },
     {
       path: '/cv',
       name: 'cv',
-      component: Cv,
+      component: views.Cv,
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact,
+      component: views.Contact,
     },
     {
       path: '/consociation',
       name: 'consociation',
-      component: Consoiation,
+      component: views.Consociation,
     },
      {
       path: '/blog',
       name: 'blog',
-      component: Blog,
+      component: views.Blog,
     },
     {
         path: '/collection',
         name: 'colelction',
-        component: Collection,
+        component: views.Collection,
     },
     {
       path: '/exclusive',
       name: 'exclusive',
-      component: Exclusive,
+      component: views.Exclusive,
     }
   ]
 } )
