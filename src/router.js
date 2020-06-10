@@ -17,53 +17,63 @@ export default new Router( {
     {
       path: '/',
       name: 'home',
-      component: views.Home
+      component: views.Home,
+      meta: {keepAlive:false},
     },
     {
       path: '/article',
       name: 'article',
       component: views.Article,
+      meta: {keepAlive:false},
       props: true
     },
     {
       path: '/about',
       name: 'about',
-      component: views.About
+      component: views.About,
+      meta: {keepAlive:false},
     },
     {
       path: '/expedition',
       name: 'expedition',
-      component: views.Expedition
+      component: views.Expedition,
+      meta: {keepAlive:false},
     },
     {
       path: '/cv',
       name: 'cv',
-      component: views.Cv
+      component: views.Cv,
+      meta: {keepAlive:false},
     },
     {
       path: '/contact',
       name: 'contact',
-      component: views.Contact
+      component: views.Contact,
+      meta: {keepAlive:false},
     },
     {
       path: '/consociation',
       name: 'consociation',
-      component: views.Consociation
+      component: views.Consociation,
+      meta: {keepAlive:false},
     },
      {
       path: '/blog',
       name: 'blog',
-      component: views.Blog
+      component: views.Blog,
+      meta: {keepAlive:false},
     },
     {
         path: '/collection',
         name: 'colelction',
-        component: views.Collection
+        component: views.Collection,
+        meta: {keepAlive:false},
     },
     {
       path: '/exclusive',
       name: 'exclusive',
-      component: views.Exclusive
+      component: views.Exclusive,
+      meta: {keepAlive:false},
     }
   ]
 } )
