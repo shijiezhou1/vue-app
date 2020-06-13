@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   pwa: {
-    manifestPath: 'public/manifest.json',
+    manifestPath: 'manifest.json',
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: 'src/service-worker.js',

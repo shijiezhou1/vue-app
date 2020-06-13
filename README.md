@@ -87,3 +87,7 @@ font-src * data: blob: 'unsafe-inline';
 ### Vue Environment variable 
 
 Must use `VUE_APP_` for the prefix
+
+### Manifest generator
+
+https://app-manifest.firebaseapp.com/
