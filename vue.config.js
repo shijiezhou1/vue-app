@@ -3,9 +3,9 @@ const path = require('path');
 
 module.exports = {
   pwa: {
-    workboxPluginMode: "InjectManifest",
+    workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc: path.resolve(__dirname, "src/service-worker.js"),
+      swSrc: 'src/service-worker.js',
     }
   },
   filenameHashing: true,
