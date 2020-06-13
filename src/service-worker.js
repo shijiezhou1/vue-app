@@ -9,9 +9,4 @@ self.addEventListener("message", msg => {
     self.skipWaiting();
   }
 
-  // IGNORE CNAME CACHE
-  if (event.request.url.indexOf('CNAME') !== -1) {
-    return false;
-  }
-
 })

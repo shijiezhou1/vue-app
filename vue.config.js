@@ -7,7 +7,7 @@ module.exports = {
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: 'src/service-worker.js',
-      exclude: [/\.map$/, /_redirects/],
+      exclude: [/\.map$/, /_redirects/, /CNAME(.*)/],
     }
   },
   filenameHashing: true,
