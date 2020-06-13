@@ -2,6 +2,12 @@
 const path = require('path');
 
 module.exports = {
+  pwa: {
+    workboxPluginMode: "InjectManifest",
+    workboxOptions: {
+      swSrc: path.resolve(__dirname, "src/service-worker.js"),
+    }
+  },
   filenameHashing: true,
   outputDir: 'dist',
   // publicPath: process.env.NODE_ENV === 'production'
@@ -41,7 +47,6 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        'vue$': true ? 'vue/dist/vue.runtime.js' : 'vue/dist/vue.runtime.min.js',
         "@": path.resolve(__dirname, "src"),
       },
     },

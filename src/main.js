@@ -5,6 +5,9 @@ import router from './router'
 import VueNavigationBar from "vue-navigation-bar"
 import "vue-navigation-bar/dist/vue-navigation-bar.css"
 
+// service worker
+import './registerServiceWorker';
+
 // Vuetify
 import vuetify from '@/plugins/vuetify' // path to vuetify export
 
