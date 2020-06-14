@@ -31,10 +31,20 @@ if (process.env.NODE_ENV === 'production') {
     }
   })
 
-  let refreshing
-  navigator.serviceWorker.addEventListener("controllerchange", e=>{
-    if (refreshing) return
-    window.location.reload()
-    refreshing = true
-  })
+  function isRunningStandalone() {
+    return (window.matchMedia('(display-mode: standalone)').matches);
+  }
+
+  if (isRunningStandalone()) {
+      /* This code will be executed if app is running standalone since chrome
+        ios wont show the content properly
+      */
+
+      let refreshing
+      navigator.serviceWorker.addEventListener("controllerchange", e=>{
+        if (refreshing) return
+        window.location.reload()
+        refreshing = true
+      })
+  }
 }
