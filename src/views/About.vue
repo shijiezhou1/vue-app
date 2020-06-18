@@ -24,9 +24,11 @@ import GitHubCalendar from 'github-calendar';
 import AboutCard from "../components/AboutCard.vue"
 
 export default {
+    props: {
+      title: null
+    },
     components: { BlockQuoteContent, AboutCard },
     data: () => ({
-        title: "About | 🌮",
         profileImage: require('@/assets/profile/profile.jpg'),
         profileDescription: `Shijie Zhou studies at University of California, San Diego in the Interdisciplinary Computer in Arts. He is also the member for design and construct web developer at the Worldview project organization. Currently, he is working in Akirix(MMSG department) with software engineer.
 

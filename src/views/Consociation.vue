@@ -1,5 +1,6 @@
 <template>
   <div id="consociation">
+     <title>{{title}}</title>
      <v-container fluid>
        <v-row class="align-center my-5">
       <div
@@ -43,6 +44,7 @@
 import json from '../assets/data.consociation.json';
 
 export default {
+  props: ['title'],
   data() {
     return {
       dialog: false,

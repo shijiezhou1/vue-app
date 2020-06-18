@@ -43,13 +43,15 @@ import data from "../assets/data.json";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+    props: {
+      title: null
+    },
     components: {
         BlogContainer,
         Prometheus
     },
     data: function() {
         return {
-            title: "Home | Shijie Zhou",
             data: data
         };
     },

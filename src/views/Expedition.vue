@@ -18,13 +18,13 @@ import Prometheus from "../components/Prometheus";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+  props: ['title'],
   components:{
      Prometheus,
      BlockQuoteContent
   },
   data() {
     return {
-      title: "🔥｜ Expedition",
     }
   },
   computed: mapGetters(["allArticle"]),

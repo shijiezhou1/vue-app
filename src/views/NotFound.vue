@@ -8,16 +8,12 @@
 </template>
 <script>
 export default {
-  data() {
-        return {
-            title: "404 Not Found"
-        }
-  },
   props: {
     resource: {
       type: String,
       required: true
-    }
+    },
+    title: null
   }
 }
 </script>

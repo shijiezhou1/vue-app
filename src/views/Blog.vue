@@ -1,6 +1,6 @@
 <template>
   <div id="blog">
-    <title>{{Blog}}</title>
+    <title>{{title}}</title>
 
     <loading
       class="vld-overlay"
@@ -29,6 +29,7 @@ import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
+  props: ['title'],
   components: {
     BlogContainer,
     Loading,
@@ -36,7 +37,6 @@ export default {
   },
   data() {
     return {
-      Blog: "🛹 | Blog",
       mediumData: null,
       isLoading: false,
       fullPage: true,

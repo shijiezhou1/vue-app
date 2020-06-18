@@ -1,5 +1,6 @@
 <template>
   <div id="collection">
+    <title>{{title}}</title>
     <h1>Collection:</h1>
     <BlockQuoteContent
       content="Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
@@ -45,6 +46,7 @@
 <script>
 import BlockQuoteContent from "../components/BlockQuoteContent.vue";
 export default {
+  props: ['title'],
   components: {
     BlockQuoteContent
   },

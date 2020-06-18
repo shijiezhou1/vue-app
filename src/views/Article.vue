@@ -34,12 +34,12 @@ export default {
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        
+
         .article_content {
             width: 50%;
             margin: 0 auto;
             text-align: left;
-            
+
             img {
                 width: 100%;
             }
@@ -48,9 +48,9 @@ export default {
               width: 100%;
               word-break: break-word;
             }
-            
+
         }
-        
+
         @media (max-width: 576px) {
             .article_content {
                 width: 96%;
@@ -62,5 +62,5 @@ export default {
             }
         }
     }
-    
+
 </style>

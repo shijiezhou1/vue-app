@@ -1,5 +1,6 @@
 <template>
   <div id="contact">
+    <title>{{title}}</title>
     <h1>Contact:</h1>
     <BlockQuoteContent
       content="Tough-minded optimists approach problems with a can-do philosophy and emerge stronger from tragedies"
@@ -47,6 +48,7 @@ import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import SocialMedia from '../components/SocialMedia.vue';
 
 export default {
+  props: ['title'],
   data: () => {
     return {
       status: null,

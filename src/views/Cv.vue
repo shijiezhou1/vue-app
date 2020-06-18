@@ -1,5 +1,6 @@
 <template>
   <div id="pdfvuer">
+    <title>{{title}}</title>
     <loading class="vld-overlay" :active.sync="isLoading"
              :can-cancel="false"
              :is-full-page="fullPage"
@@ -21,6 +22,7 @@
   import Loading from 'vue-loading-overlay';
 
   export default {
+    props: ['title'],
     components: {
       pdf: pdfvuer,
       Loading

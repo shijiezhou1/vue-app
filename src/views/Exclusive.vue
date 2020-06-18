@@ -1,5 +1,6 @@
 <template>
   <div id="exclusive">
+    <title>{{title}}</title>
     <h1></h1>
     <section>
       <div class="fluid-container">
@@ -21,7 +22,7 @@
 
 <script>
 export default {
-
+props: ['title'],
 }
 </script>
 
