@@ -9,7 +9,8 @@ import Consociation from './Consociation.vue'
 import Blog from "./Blog.vue";
 import Collection from "./Collection.vue"
 import Exclusive from "./Exclusive.vue"
+import Podcast from './Podcast.vue'
 
-export { Home, About, Expedition, Cv, Contact, NotFound, Article, Consociation, Blog, Collection, Exclusive };
+export { Home, About, Expedition, Cv, Contact, NotFound, Article, Consociation, Blog, Collection, Exclusive, Podcast };
 
 // !!! DO NOT DELETE THIS FILE UNLESS YOU WANT TO HAVE CODE SPLITTING

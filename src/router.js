@@ -68,13 +68,25 @@ export default new Router({
       path: '/collection',
       name: 'colelction',
       component: views.Collection,
-      props: (route) => { return { title: 'Colelction | 👌🏻' } }
+      props: ( route ) => {
+        return { title: 'Colelction | 👌🏻' }
+      }
     },
     {
       path: '/exclusive',
       name: 'exclusive',
       component: views.Exclusive,
-      props: (route) => { return { title: 'Exclusive | 🏵' } }
-    }
+      props: ( route ) => {
+        return { title: 'Exclusive | 🏵' }
+      }
+    },
+    {
+      path: '/podcast',
+      name: 'podcast',
+      component: views.Podcast,
+      props: ( route ) => {
+        return { title: 'Podcast | 🏵' }
+      }
+    },
   ]
 })

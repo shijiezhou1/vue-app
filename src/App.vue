@@ -111,6 +111,13 @@ export default {
                 subText: 'Enjoy writing blog on Coach.',
                 path: './blog'
               },
+              { type: 'hr' },
+              {
+                type: 'link',
+                text: 'Podcast',
+                subText: 'My daily podcast route.',
+                path: './podcast'
+              },
               {
                 type: 'hr'
               },
@@ -155,41 +162,41 @@ export default {
 
     };
   },
-  sockets: {
-    auth: function (response) {
-      this.jwt = response.jwt;
-    }
-  },
   methods: {
-    vnbItemClicked(text) {
-      if (text === 'About') {
-        // alert("'About' was selected.");
-      }
-    },
-
-    login() {
-      if (this.$socket.disconnected) {
-        this.$toasted.global
-          .appError({
-            message: "You are not connected to the server!"
-          })
-          .goAway(1200);
-      } else {
-        this.$socket.emit("authenticate", {
-          data: JSON.stringify({
-            username: this.username,
-            password: this.password
-          })
-        });
-      }
-    },
     logOut() {
       this.jwt = null;
       this.$toasted.global
-        .appSuccess({
+        .appSuccess( {
           message: "Locally Logged Out!"
-        })
-        .goAway(1200);
+        } )
+        .goAway( 1200 );
+    },
+
+    login() {
+      if ( this.$socket.disconnected ) {
+        this.$toasted.global
+          .appError( {
+            message: "You are not connected to the server!"
+          } )
+          .goAway( 1200 );
+      } else {
+        this.$socket.emit( "authenticate", {
+          data: JSON.stringify( {
+            username: this.username,
+            password: this.password
+          } )
+        } );
+      }
+    },
+    vnbItemClicked( text ) {
+      if ( text === 'About' ) {
+        // alert("'About' was selected.");
+      }
+    }
+  },
+  sockets: {
+    auth: function ( response ) {
+      this.jwt = response.jwt;
     }
   }
 };
