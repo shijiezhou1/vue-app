@@ -115,8 +115,17 @@ export default {
               {
                 type: 'link',
                 text: 'Podcast',
-                subText: 'My daily podcast route.',
+                subText: 'Listen daily podcast route.',
                 path: './podcast'
+              },
+              {
+                type: 'hr'
+              },
+              {
+                type: 'link',
+                text: 'Book',
+                subText: 'Read book to learn.',
+                path: './book'
               },
               {
                 type: 'hr'

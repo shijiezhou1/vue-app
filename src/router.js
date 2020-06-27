@@ -88,5 +88,13 @@ export default new Router({
         return { title: 'Podcast | 🏵' }
       }
     },
+    {
+      path: '/book',
+      name: 'book',
+      component: views.Book,
+      props: ( route ) => {
+        return { title: 'Book | 🏵' }
+      }
+    },
   ]
 })

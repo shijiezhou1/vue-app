@@ -10,7 +10,8 @@ import Blog from "./Blog.vue";
 import Collection from "./Collection.vue"
 import Exclusive from "./Exclusive.vue"
 import Podcast from './Podcast.vue'
+import Book from './Book.vue'
 
-export { Home, About, Expedition, Cv, Contact, NotFound, Article, Consociation, Blog, Collection, Exclusive, Podcast };
+export { Home, About, Expedition, Cv, Contact, NotFound, Article, Consociation, Blog, Collection, Exclusive, Podcast, Book };
 
 // !!! DO NOT DELETE THIS FILE UNLESS YOU WANT TO HAVE CODE SPLITTING
