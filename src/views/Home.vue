@@ -59,12 +59,13 @@ export default {
       this.$ga.page('/home');
     },
     methods: {
-      ...mapActions(['fetchArticles', 'fetchMediums']),
+      ...mapActions(['fetchArticles', 'fetchMediums', 'fetchBooks']),
     },
     created() {
-      if(this.$store.getters.length === 0) {
+      if(this.$store.getters.allMedium.length === 0) {
         this.fetchMediums();
         this.fetchArticles();
+        this.fetchBooks();
       }
     }
     // mounted() {

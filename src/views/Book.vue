@@ -41,16 +41,27 @@
 </template>
 
 <script>
-  import json from "../assets/book.json";
-
+import { mapGetters, mapActions, mapState } from "vuex";
   export default {
     props: [ 'title' ],
     data() {
-      return { items: [] }
+      return {
+        isLoading: false,
+        }
     },
-    created() {
-      this.items = json;
+    mounted() {
+    if(this.$store.getters.allBooks.length === 0 ) {
+      this.fetchBooks();
     }
+  },
+    computed: {
+      ...mapState({
+        items: state => state.books.books
+      })
+    },
+    methods: {
+      ...mapActions(['fetchBooks'])
+    },
   };
 </script>
 

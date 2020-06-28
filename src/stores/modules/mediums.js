@@ -1,4 +1,4 @@
-import { get } from "../api/api";
+import { get } from "../services/api";
 
 const state = { mediums: [] }
 

@@ -1,8 +1,6 @@
 import {get}from '../api/api'
 
-const state = {
-  articles: []
-}
+const state = { articles: [] }
 
 const getters = {
   allArticle: state => state.articles
