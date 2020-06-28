@@ -5,7 +5,6 @@ import * as views from "./views/index";
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '*',
@@ -85,7 +84,7 @@ export default new Router({
       name: 'podcast',
       component: views.Podcast,
       props: ( route ) => {
-        return { title: 'Podcast | 🏵' }
+        return { title: 'Podcast | 🌞' }
       }
     },
     {

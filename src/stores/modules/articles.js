@@ -1,4 +1,4 @@
-import {get}from '../api/api'
+import { get } from '../services/api'
 
 const state = { articles: [] }
 
@@ -7,20 +7,20 @@ const getters = {
 }
 
 const actions = {
-  async fetchArticles({commit}) {
+  async fetchArticles({ commit }) {
     const res = await get('/articles')
     commit('setArticles', res.data);
   },
 
-  async createArticle({commit}, title) {
+  async createArticle({ commit }, title) {
 
   },
 
-  async deleteArticle({commit}, id) {
+  async deleteArticle({ commit }, id) {
 
   },
 
-  async updateArticle({commit}, id) {
+  async updateArticle({ commit }, id) {
 
   }
 }
@@ -32,7 +32,7 @@ const mutations = {
 
   removeArticles: (state, id) => (state.articles = state.articles.filter(art => art.id !== id)),
 
-  updateArticles: (state, updArticle) => {}
+  updateArticles: (state, updArticle) => { }
 }
 
 export default {
