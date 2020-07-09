@@ -889,6 +889,11 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@popperjs/core@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
+  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
+
 "@rkusa/linebreak@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@rkusa/linebreak/-/linebreak-1.0.0.tgz#987b6b1f8cc8f5901afbf45f4e9f7744518d0163"
@@ -6709,11 +6714,6 @@ pnp-webpack-plugin@^1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.14.7:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 portfinder@^1.0.26:
   version "1.0.26"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.26.tgz#475658d56ca30bed72ac7f1378ed350bd1b64e70"
@@ -8564,12 +8564,12 @@ tiny-inflate@^1.0.0, tiny-inflate@^1.0.3:
   resolved "https://registry.yarnpkg.com/tiny-inflate/-/tiny-inflate-1.0.3.tgz#122715494913a1805166aaf7c93467933eea26c4"
   integrity sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==
 
-tippy.js@^4.2.0:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.3.5.tgz#882bff8d92f09bb0546d2826d5668c0560006f54"
-  integrity sha512-NDq3efte8nGK6BOJ1dDN1/WelAwfmh3UtIYXXck6+SxLzbIQNZE/cmRSnwScZ/FyiKdIcvFHvYUgqmoGx8CcyA==
+tippy.js@^6.2.4:
+  version "6.2.5"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.2.5.tgz#5335e28228af5e22c524fe5e8a94654514f34b92"
+  integrity sha512-UIf8G99PMXGmdWPrr36s/DjQBdfxMPwzvPUXsxs3tDFDTZ1SgvKG+Jvt6RJ+aBqYL0oe/STxh3MNkCV3IWAKmw==
   dependencies:
-    popper.js "^1.14.7"
+    "@popperjs/core" "^2.4.4"
 
 to-absolute-glob@^0.1.1:
   version "0.1.1"
@@ -9030,13 +9030,13 @@ vue-loading-overlay@^3.3.2:
   resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.3.2.tgz#9853c90d9583ac2ec322da29bb90942bf65449af"
   integrity sha512-5nBsaeb3quOBVXCgbSu9VNWkBVEsbDCupahv8dqkgbtJ00uKoNOPyw38+reWGHKNDBDl+x7x8wT8u3dV7ali7g==
 
-vue-navigation-bar@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/vue-navigation-bar/-/vue-navigation-bar-2.0.0.tgz#a9a8384ce72d014986eb6bbbada0fefe4c6ac968"
-  integrity sha512-8/2YVdmUngbcslxhpPhI1p4/G+iN6exf5oPaG3pOdJulTAXNXgELMUXG16LnZF5qjMvcm99FHVSIsahtrOVbNQ==
+vue-navigation-bar@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vue-navigation-bar/-/vue-navigation-bar-3.0.0.tgz#788fe6a42bf651d8d5f848b6e7de7074ba4a473c"
+  integrity sha512-q8qCJV1HQkHve9G0h//DblfEKTvvDfduCmXAWw8D7kj5nOp+j1rVyPWpeoz0bhMN5RJOvoPrIsQsQ9Y5lOAaiw==
   dependencies:
-    tippy.js "^4.2.0"
-    vue-screen-size "^1.0.0"
+    tippy.js "^6.2.4"
+    vue-screen-size "^1.0.1"
     vue2-transitions "^0.3.0"
 
 vue-resize-sensor@^2.0.0:
@@ -9049,7 +9049,7 @@ vue-router@^3.2.0:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.3.4.tgz#4e38abc34a11c41b6c3d8244449a2e363ba6250b"
   integrity sha512-SdKRBeoXUjaZ9R/8AyxsdTqkOfMcI5tWxPZOUX5Ie1BTL5rPSZ0O++pbiZCeYeythiZIdLEfkDiQPKIaWk5hDg==
 
-vue-screen-size@^1.0.0:
+vue-screen-size@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/vue-screen-size/-/vue-screen-size-1.0.1.tgz#4c120ac09929b735eafe5898c6abf12ddb441895"
   integrity sha512-FvPAQAZp235cWpceazYK3CyPXUmogJRbPwa2F34l4BiwNoCZxZIKcEgqrScpCm0pi8llPrGlHHiuM7uuQc3mHA==
