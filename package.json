@@ -15,7 +15,7 @@
     "core-js": "^3.6.5",
     "github-calendar": "^2.1.1",
     "isotope-layout": "^3.0.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "module": "^1.2.5",
     "pdfjs": "^2.3.7",
     "pdfvuer": "^1.6.0",
