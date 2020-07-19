@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="socialMedia">
     <v-btn v-for="so in social" :key="so.name"
-      fab
-      icon
-      v-on:click="oLink(so.url)"
-      :color="so.color"
+           fab
+           icon
+           v-on:click="oLink(so.url)"
+           :color="so.color"
+           class="social-media"
     >
       <v-icon>{{so.name}}</v-icon>
     </v-btn>
@@ -25,6 +26,11 @@ export default {
           color: 'deep-orange'
         },
         {
+          name: 'fab fa-medium',
+          url: 'https://medium.com/@.jay',
+          color: 'grey darken-4'
+        },
+        {
           name: 'fab fa-linkedin',
           url: 'https://www.linkedin.com/in/shijiezhou1/',
           color: 'blue darken-2'
@@ -38,6 +44,11 @@ export default {
           name: 'fab fa-twitter',
           url: 'https://twitter.com/ShijieZhou5',
           color: 'blue'
+        },
+        {
+          name: 'fab fa-pinterest',
+          url: 'https://www.pinterest.com/cs5129606/',
+          color: 'red'
         },
         {
           name: 'fab fa-stack-overflow',
@@ -60,5 +71,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  .socialMedia {
+  }
+
+  .social-media {
+
+  }
 </style>
