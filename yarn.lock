@@ -5918,6 +5918,11 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
+node-ensure@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/node-ensure/-/node-ensure-0.0.0.tgz#ecae764150de99861ec5c810fd5d096b183932a7"
+  integrity sha1-7K52QVDemYYexcgQ/V0Jaxg5Mqc=
+
 node-forge@0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.9.0.tgz#d624050edbb44874adca12bb9a52ec63cb782579"
@@ -6607,10 +6612,13 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-pdfjs-dist@^2.3.200:
-  version "2.4.456"
-  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-2.4.456.tgz#0eaad2906cda866bbb393e79a0e5b4e68bd75520"
-  integrity sha512-yckJEHq3F48hcp6wStEpbN9McOj328Ib09UrBlGAKxvN2k+qYPN5iq6TH6jD1C0pso7zTep+g/CKsYgdrQd5QA==
+pdfjs-dist@2.3.200:
+  version "2.3.200"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-2.3.200.tgz#2920dc28ae7f2b8313cd6d6223c97ae85ac07eac"
+  integrity sha512-+8wBjU5h8LPZOIvR9X2uCrp/8xWQG1DRDKMLg5lzGN1qyIAZlYUxA0KQyy12Nw5jN7ozulC6v97PMaDcLgAcFg==
+  dependencies:
+    node-ensure "^0.0.0"
+    worker-loader "^2.0.0"
 
 pdfjs@^2.3.7:
   version "2.3.9"
@@ -6624,13 +6632,13 @@ pdfjs@^2.3.7:
     unorm "^1.6.0"
     uuid "^7.0.3"
 
-pdfvuer@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/pdfvuer/-/pdfvuer-1.6.0.tgz#a04093025f0f769ce9b3b4c0fc618d52773aa503"
-  integrity sha512-q+gBG9upHW3duHNE7TOMsjA9q0GTz98Z+BgRdVGbNyLz8cw9CGkZ7nRE85q9fr85I5/JzQfE8a1aHrEAoL+v9A==
+pdfvuer@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/pdfvuer/-/pdfvuer-1.7.1.tgz#8d783d2c34a2f5d00a4017e32ac8a2bcd494a072"
+  integrity sha512-eyoHt3MPYzcUIssicBbzqSrBe+Vvs6Co9e3kHUSJE4zbr42opQ27LVqMNnPiM9dnMTofeZLJXqqzg2UcJr+4iA==
   dependencies:
     core-js "3"
-    pdfjs-dist "^2.3.200"
+    pdfjs-dist "2.3.200"
     raw-loader "^0.5.1"
     vue-resize-sensor "^2.0.0"
 
