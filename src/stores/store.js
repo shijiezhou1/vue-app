@@ -7,6 +7,7 @@ import * as post from './modules/post.js'
 import articles from './modules/articles.js'
 import mediums from './modules/mediums.js'
 import books from './modules/books.js'
+import consociation from './modules/consociation.js'
 
 // Vue persistable
 import createPersistedState from "vuex-persistedstate";
@@ -23,6 +24,7 @@ export default new Vuex.Store({
     articles,
     mediums,
     books,
+    consociation,
   },
   state: {
     categories: [

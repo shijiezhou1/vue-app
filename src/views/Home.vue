@@ -40,7 +40,7 @@
 import Prometheus from "../components/Prometheus";
 import BlogContainer from '../components/BlogContainer.vue';
 import data from "../assets/data.json";
-import { mapGetters, mapActions } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
     props: {
@@ -59,13 +59,14 @@ export default {
       this.$ga.page('/home');
     },
     methods: {
-      ...mapActions(['fetchArticles', 'fetchMediums', 'fetchBooks']),
+      ...mapActions( [ 'fetchArticles', 'fetchMediums', 'fetchBooks', 'fetchConsociation' ] ),
     },
     created() {
       if(this.$store.getters.allMedium.length === 0) {
         this.fetchMediums();
         this.fetchArticles();
         this.fetchBooks();
+        this.fetchConsociation();
       }
     }
     // mounted() {
