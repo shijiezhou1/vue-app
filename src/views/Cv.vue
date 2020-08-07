@@ -9,39 +9,36 @@
     ></loading>
     <pdf :src="pdfdata" v-for="i in numPages" :key="i" :id="i" :page="i" :scale.sync="scale"
          style="width:100%;margin:20px auto;">
-      <!-- <template slot="loading">
-        loading content here...
-      </template> -->
     </pdf>
   </div>
 </template>
 
 <script>
-  // script is reference to advance pdfvuer
-  import pdfvuer from 'pdfvuer';
-  import Loading from 'vue-loading-overlay';
+// script is reference to advance pdfvuer
+import pdfvuer from 'pdfvuer';
+import Loading from 'vue-loading-overlay';
 
-  export default {
-    props: ['title'],
-    components: {
-      pdf: pdfvuer,
-      Loading
-    },
-    data() {
-      return {
-        page: 1,
-        numPages: 0,
-        pdfdata: undefined,
-        errors: [],
-        scale: 'page-width',
-        isLoading: false,
-        fullPage: true,
-      };
-    },
-    computed: {
-      formattedZoom() {
-        return Number.parseInt( this.scale * 100 );
-      }
+export default {
+  props: [ 'title' ],
+  components: {
+    pdf: pdfvuer,
+    Loading
+  },
+  data() {
+    return {
+      page: 1,
+      numPages: 0,
+      pdfdata: undefined,
+      errors: [],
+      scale: 'page-width',
+      isLoading: false,
+      fullPage: true,
+    };
+  },
+  computed: {
+    formattedZoom() {
+      return Number.parseInt( this.scale * 100 );
+    }
     },
     mounted() {
       this.isLoading = true;

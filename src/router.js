@@ -76,7 +76,7 @@ export default new Router({
       name: 'exclusive',
       component: views.Exclusive,
       props: ( route ) => {
-        return { title: 'Exclusive | 🏵' }
+        return { title: 'Exclusive | 🙂' }
       }
     },
     {
