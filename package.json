@@ -17,8 +17,6 @@
     "isotope-layout": "^3.0.6",
     "lodash": "^4.17.15",
     "module": "^1.2.5",
-    "pdfjs": "^2.3.7",
-    "pdfvuer": "^1.6.0",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-analytics": "^5.22.1",
