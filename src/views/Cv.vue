@@ -1,5 +1,5 @@
 <template>
-  <div id="cv" style="height: 100%">
+  <div id="cv" style="height: 93%">
     <title>{{ title }}</title>
     <iframe :src="url" frameborder="0" width="100%" height="100%"></iframe>
   </div>
