@@ -15,7 +15,7 @@
     "core-js": "^3.6.5",
     "github-calendar": "^2.1.1",
     "isotope-layout": "^3.0.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "module": "^1.2.5",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
