@@ -20,9 +20,11 @@
         v-for="(slide, i) in slides"
         eager
         :key="i"
-        :src="slide.src"
       >
-
+        <v-img
+          :src="slide.src"
+          :lazy-src="require('@/assets/images/loading.gif')"
+          height="100%" eager/>
         <!-- DO NOT DELETE BELOW -->
         <!-- <v-sheet
           :color="colors[i]"

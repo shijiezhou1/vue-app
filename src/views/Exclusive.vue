@@ -12,10 +12,6 @@
         >
         </video>
       </div>
-
-      <div class="textInfo">
-        <p>Shoot for the beach from Mixkit</p>
-      </div>
     </section>
   </div>
 </template>
