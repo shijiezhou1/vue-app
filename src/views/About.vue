@@ -47,7 +47,6 @@ He gained experience in media use and computer art. He also familiar with web de
 
 <style lang="scss">
 #about {
-    @import '@/assets/styles/github-calendar-responsive.scss';
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
