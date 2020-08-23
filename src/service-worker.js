@@ -5,7 +5,9 @@ if (workbox) {
 // install new service worker when ok, then reload page.
 self.addEventListener("message", msg => {
 
-  if (event.data && event.data.type === 'SKIP_WAITING') {
+  console.log( '****************', msg )
+
+  if ( data && data.type === 'SKIP_WAITING' ) {
     self.skipWaiting();
   }
 
