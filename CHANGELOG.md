@@ -1,0 +1,191 @@
+#### 0.1.0 (2020-08-25)
+
+- Update loading icons
+- Update loading icons
+- Update loading icons
+- Remove unused stuff
+- Adding build
+- Adding build
+- Include those file
+- Update pdf iframe
+- Update pdf file
+- Update pdf file
+- Update consociation file
+- Update changes
+- Update changes
+- Hash for history information
+- Update data with front loading
+- Update pdf favorite list
+- Compress
+- Update resume
+- Including podcast lists
+- Update route header
+- Image og update
+- Making it better for the seo
+- REMOVE PRERENDER
+- Adding prerender-spa-plugin for SEO
+- Google analytics
+- Some configuration
+- Update service worker
+- Ignore cname
+- Service worker refix
+- Update manifest
+- Text update
+- Update some text
+- Include manifestjson
+- Adding manifestjson
+- Update path
+- Adding vue pwa service workers
+- Update configuration
+- update package json
+- Adding route
+- Prevent spliting fiel
+- Optimize file
+- Router
+- Return array
+- Update successful
+- Learning hard about the image return
+- More documentation
+- Update search tag
+- Update icons
+- Fixed keys and api endpoints
+- Updating port to save subscribe
+- Adding task
+- Merge pull request #21 from shijiezhou1/dependabot/npm_and_yarn/sass-1.26.7
+- Bump sass from 1.26.5 to 1.26.7
+- Update api
+- Minheight
+- Adding one more version
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Update image and route
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Update image and route
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Update image and route
+- RANDOM
+- Retry
+- Update appveyor
+- Package-lock fixed
+- Using font awesome instead of mdijs
+- Update image and route
+- Update all file
+- Adding those file
+- Update some of the configuration
+- Using font awesome instead of mdijs
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Apply different env variable
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Apply different env variable
+- post is not used
+- Using original state
+- Update post and vuex loading for all
+- Load from axios
+- Update store
+- Apply different env variable
+- Main socket url
+- Remove useless package
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Update project list and new data2 for the next version
+- Fixed with simple solution
+- Code format
+- Redirect if the page is empty
+- Update block color
+- Update mobile view component
+- Update block post now
+- Style Update
+- Update project list and new data2 for the next version
+- Fixed with simple solution
+- Code format
+- Redirect if the page is empty
+- Update block color
+- Update mobile view component
+- Update block post now
+- Update Blog api and app route
+- Update route and exclusive point
+- Style Update
+- Update app style and prevent moving left and right
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Update file
+- Okay social media is upt pdate
+- Update file
+- Update file
+- Reset
+- Update
+- Okay social media is upt pdate
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Update contact with post
+- Merge pull request #5 from shijiezhou1/shijiezhou1/gitpod-setup
+- Merge branch 'master' into shijiezhou1/gitpod-setup
+- Fixed override style text
+- Update file system
+- Adding collection
+- Update style with scss
+- Update component information
+- Adding blog and remove hello world
+- Update style
+- Add gitpod config
+- Update style with scss
+- Update component information
+- Adding blog and remove hello world
+- Update style
+- Add gitpod config
+- Medium
+- Update all image and information
+- Update component
+- Redirect
+- Remove content information
+- Update main image
+- Adding socket.io and tasted
+- Update some
+- Update deploy information
+- Merge branch 'imgbot'
+- Update
+- Update one error
+- Merge remote-tracking branch 'refs/remotes/origin/master'
+- Update
+- Console but nothing print
+- Update
+- Update card container
+- Update card container
+- Console but nothing print
+- The image can be generated now.
+- The final source
+- Adding logic about why blog container re-render
+- Forget to stop loading icons
+- update vuejs
+- Update name of the files
+- Keep file back to original
+- Fixed the build issue
+- Fixed Config File
+- Update config
+- Fixed the mobile style
+- Some clean up on the code
+- Getting the 404 Error correctly
+- remove other folder
+- Save you work
+- Merge pull request #1 from shijiezhou1/imgbot
+- Update README.md
+- Merge branch 'master' of https://github.com/shijiezhou1/vue-app
+- Adding Spinner for Loading Pdf
+- abc
+- add more libraries
+- adding library to readme
+- adding information about style
+- adding profile page
+- update good condition blockquote
+- update good condition
+- search, filter and sort all works perfect now
+- basic ignore and fixed the issue we have before
+- using cdn for now because the conflict issues
+- fitler or sort or shuffle is not working
+- adding  vueisotope package to work with shuffle
+- update
+- update information
+- [ImgBot] Optimize images
+- used pdfvuer for now
+- working version
+- testing cv route
+- the card is doen
+- finish route setitng
+- menu is done
+- first night of the setting up
