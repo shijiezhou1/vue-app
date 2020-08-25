@@ -9127,10 +9127,10 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-loading-overlay@^3.3.2:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.3.3.tgz#d23ea9f632d13fce49e262e803083baea6149222"
-  integrity sha512-wq07DyzqAtQ7A5Q1VPNMGhFLlSWTGAEdzhXgJqN4Xbr/RKpUYvW3EsdRIiwBXKawracJwnV4lTpqS8HrjI20iA==
+vue-loading-overlay@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.3.4.tgz#8560fb92786ab8af4febe412b9e524dc5635e7ea"
+  integrity sha512-kbjnORxDgDCUuW79RdS6LzNx24SRRzam8M8ODIf13rnoUvjNEArCdEDHGPq5FHubwV3GHG/kybkg4JpveVzklg==
 
 vue-navigation-bar@^2.0.0:
   version "2.1.1"
