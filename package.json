@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "build:prod": "vue-cli-service build --mode production",
     "start": "vue-cli-service serve",
+    "clean":"rm -rf node_modules yarn.lock package-lock.json",
     "test": "echo 'test'"
   },
   "dependencies": {
