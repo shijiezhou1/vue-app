@@ -2,6 +2,22 @@
 const path = require('path');
 
 module.exports = {
+  css: {
+    sourceMap: false,
+    loaderOptions: {
+      scss: {
+        additionalData: `
+                      @import "~@/assets/styles/index.scss";
+                  `
+      },
+      sass: {
+        additionalData: `
+                      @import "~@/assets/styles/index.scss"
+                  `
+      }
+    }
+  },
+
   pwa: {
     manifestPath: 'manifest.json',
     workboxPluginMode: 'InjectManifest',
