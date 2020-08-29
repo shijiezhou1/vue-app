@@ -5,7 +5,7 @@
         v-for="item in items"
         :key="item.msg"
       >
-         <router-link :to="{ name: 'article', params: { msg: item.msg, html: item.html }}">
+        <router-link :to="{ name: 'article', params: { msg: item.msg, html: item.html }}">
           <img
             :key="item.msg"
             class="section-img profile"
@@ -28,21 +28,28 @@ export default {
     items: null
   },
   methods: {
-      viewArticle(path) {
-          this.$router.push({name: 'article', params: { msg: 'adasdsd' } })
-      },
-      parseImgUrl(url) {
-        // 0 means init match,
-        // -1 means not match
-        if(url.indexOf("/images/") === 0) {
-          return require('@/assets'+ url);
-        }
-        return url;
+    viewArticle(path) {
+      this.$router.push({ name: 'article', params: { msg: 'adasdsd' } })
+    },
+    parseImgUrl(url) {
+      // 0 means init match,
+      // -1 means not match
+      if (url.indexOf("/images/") === 0) {
+        return require('@/assets' + url);
       }
+      return url;
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped="scoped">
 @import "@/assets/styles/prometheus.scss";
+#prometheus {
+  > main {
+    > section {
+      width: 200px;
+    }
+  }
+}
 </style>
