@@ -2,6 +2,7 @@
 const path = require('path');
 
 module.exports = {
+  
   pwa: {
     manifestPath: 'manifest.json',
     workboxPluginMode: 'InjectManifest',
@@ -50,6 +51,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
+        "~": path.resolve(__dirname, 'src/'),
         "@": path.resolve(__dirname, "src"),
       },
     },

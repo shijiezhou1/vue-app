@@ -31,7 +31,9 @@
 
   <div id="home">
     <title>{{title}}</title>
+    <button @click="logout">CLICK TO SHOW</button>
     <Prometheus :items="data" />
+    <Modal :is-show="isShow" @close="isShow=false"></Modal>
     <!-- <BlogContainer :contents="this.mediumData" /> -->
   </div>
 </template>
@@ -40,6 +42,7 @@
 import Prometheus from "../components/Prometheus";
 import BlogContainer from '../components/BlogContainer.vue';
 import data from "../assets/data.json";
+import Modal from '../components/Modal.vue';
 import { mapActions } from "vuex";
 
 export default {
@@ -49,16 +52,24 @@ export default {
   components: {
     BlogContainer,
     Prometheus,
+    Modal
   },
   data: function () {
     return {
       data: data,
+      isShow: false,
     };
+  },
+  beforeCreate() {
+     console.log('hit home', this)
   },
   mounted() {
     this.$ga.page('/home');
   },
   methods: {
+    logout(){
+      this.isShow = !this.isShow;
+    },
     ...mapActions(['fetchArticles', 'fetchMediums', 'fetchBooks', 'fetchConsociation']),
   },
   created() {
