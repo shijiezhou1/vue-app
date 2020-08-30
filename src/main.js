@@ -12,7 +12,7 @@ import './registerServiceWorker';
 import vuetify from '@/plugins/vuetify' // path to vuetify export
 
 // STORE
-import store from './stores/store'
+import store from './stores/index'
 
 // SOCKET IO
 import VueSocketIO from 'vue-socket.io'
