@@ -1,3 +1,5 @@
-export const state = {
-    post: { id: '1234567', name: 'Adam' }
+const state = { id: 'abc123', name: 'post' }
+
+export default {
+  state,
 }

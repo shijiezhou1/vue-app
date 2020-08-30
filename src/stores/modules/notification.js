@@ -1,12 +1,10 @@
 export const namespaced = true
 
-export const state = {
-  notifications: []
-}
+const state = ['1','2','3']
 
 let nextId = 1
 
-export const mutations = {
+const mutations = {
   PUSH(state, notification) {
     state.notifications.push({
       ...notification,
@@ -19,11 +17,17 @@ export const mutations = {
     )
   }
 }
-export const actions = {
+const actions = {
   add({ commit }, notification) {
     commit('PUSH', notification)
   },
   remove({ commit }, notificationToRemove) {
     commit('DELETE', notificationToRemove)
   }
+}
+
+export default {
+  state,
+  mutations,
+  actions,
 }
