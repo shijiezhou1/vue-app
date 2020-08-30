@@ -218,7 +218,6 @@ export default {
 
 #app {
   height: 100%;
-  height: 100vh;
   width: 100%;
 
   // ONLY FOR VUE NAVIGATION BAR
