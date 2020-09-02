@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import * as views from "./views/index";
 
 Vue.use(Router);
+
+const jsUcfirst = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+const loadRouter = (name) => () => import(`@/views/${jsUcfirst(name)}.vue`);
 
 export default new Router({
   routes: [
     {
       path: '*',
       name: '404',
-      component: views.NotFound,
+      component: loadRouter('Notfound'),
       props: (route) => {
         return { resource: route.path, title: '404 Not Found | 🤣' }
       }
@@ -17,56 +19,56 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: views.Home,
+      component: loadRouter('home'),
       props: (route) => { return { title: 'Home | 🏠' } }
     },
     {
       path: '/article',
       name: 'article',
-      component: views.Article,
+      component: loadRouter('article'),
       // props: (route) => { return { title: 'Article | 🙂' } }
       props: true
     },
     {
       path: '/about',
       name: 'about',
-      component: views.About,
+      component: loadRouter('about'),
       props: (route) => { return { title: 'About | 🌞' } }
     },
     {
       path: '/expedition',
       name: 'expedition',
-      component: views.Expedition,
+      component: loadRouter('expedition'),
       props: (route) => { return { title: 'Expedition | 🔥' } }
     },
     {
       path: '/cv',
       name: 'cv',
-      component: views.Cv,
+      component: loadRouter('cv'),
       props: (route) => { return { title: 'CV | ✉️' } }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: views.Contact,
+      component: loadRouter('contact'),
       props: (route) => { return { title: 'Contact | 📞' } }
     },
     {
       path: '/consociation',
       name: 'consociation',
-      component: views.Consociation,
+      component: loadRouter('consociation'),
       props: (route) => { return { title: 'Consociation | 🌿' } }
     },
     {
       path: '/blog',
       name: 'blog',
-      component: views.Blog,
+      component: loadRouter('blog'),
       props: (route) => { return { title: 'Blog | 📊' } }
     },
     {
       path: '/collection',
       name: 'colelction',
-      component: views.Collection,
+      component: loadRouter('collection'),
       props: ( route ) => {
         return { title: 'Colelction | 👌🏻' }
       }
@@ -74,7 +76,7 @@ export default new Router({
     {
       path: '/exclusive',
       name: 'exclusive',
-      component: views.Exclusive,
+      component: loadRouter('exclusive'),
       props: ( route ) => {
         return { title: 'Exclusive | 🙂' }
       }
@@ -82,7 +84,7 @@ export default new Router({
     {
       path: '/podcast',
       name: 'podcast',
-      component: views.Podcast,
+      component: loadRouter('podcast'),
       props: ( route ) => {
         return { title: 'Podcast | 🌞' }
       }
@@ -90,7 +92,7 @@ export default new Router({
     {
       path: '/book',
       name: 'book',
-      component: views.Book,
+      component: loadRouter('book'),
       props: ( route ) => {
         return { title: 'Book | 🏵' }
       }
