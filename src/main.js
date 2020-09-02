@@ -24,6 +24,9 @@ import VueLazyload from 'vue-lazyload'
 // Vue analytics
 import VueAnalytics from 'vue-analytics';
 
+import './utils/filters';
+import './utils/directives';
+
 Vue.use(VueAnalytics, {
   id: 'UA-149847604-1',
   router
