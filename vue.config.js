@@ -2,6 +2,7 @@
 const path = require('path');
 
 module.exports = {
+  runtimeCompiler: true, // When you have components import from vue
   pwa: {
     manifestPath: 'manifest.json',
     workboxPluginMode: 'InjectManifest',

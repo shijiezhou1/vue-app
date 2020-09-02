@@ -26,6 +26,7 @@ import VueAnalytics from 'vue-analytics';
 
 import './utils/filters';
 import './utils/directives';
+import './utils/components';
 
 Vue.use(VueAnalytics, {
   id: 'UA-149847604-1',
