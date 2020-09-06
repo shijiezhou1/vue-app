@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import Prometheus from "../components/Prometheus";
+import Prometheus from "../components/Prometheus.vue";
 import BlogContainer from '../components/BlogContainer.vue';
 import data from "../assets/data.json";
 import { mapActions } from "vuex";

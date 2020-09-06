@@ -43,12 +43,18 @@
       </p>
     </form> -->
     </div>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from './components/core/Footer.vue';
+
 export default {
   name: 'app',
+  components: {
+    Footer
+  },
   data() {
     return {
       navbarOptions: {
@@ -217,7 +223,6 @@ export default {
 
 #app {
   height: 100%;
-  height: 100vh;
   width: 100%;
 
   // ONLY FOR VUE NAVIGATION BAR

@@ -47,6 +47,7 @@ export default {
 @import "@/assets/styles/prometheus.scss";
 #prometheus {
   > main {
+    display: inline-block;
     > section {
       width: 200px;
     }
