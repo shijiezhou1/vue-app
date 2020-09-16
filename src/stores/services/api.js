@@ -8,7 +8,12 @@ const post = async (url, config={}) => {
   return await axios.post(process.env.VUE_APP_API + url, config)
 }
 
+const getSlow = async (url,  config={}) => {
+  return await axios.get(process.env.VUE_APP_SLOW_API + url, config)
+}
+
 export {
   get,
-  post
+  post,
+  getSlow
 }

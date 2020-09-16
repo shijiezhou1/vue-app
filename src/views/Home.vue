@@ -30,7 +30,6 @@
     </div> -->
 
   <div id="home">
-    <title>{{title}}</title>
     <Prometheus :items="data" />
     <!-- <BlogContainer :contents="this.mediumData" /> -->
   </div>
@@ -43,9 +42,6 @@ import data from "../assets/data.json";
 import { mapActions } from "vuex";
 
 export default {
-  props: {
-    title: null
-  },
   components: {
     BlogContainer,
     Prometheus,
@@ -56,6 +52,7 @@ export default {
     };
   },
   mounted() {
+    document.title = this.$route.meta.title;
     this.$ga.page('/home');
   },
   methods: {

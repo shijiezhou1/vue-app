@@ -155,21 +155,6 @@ export default {
             path: './contact'
           }
         ]
-        // menuOptionsRight: [
-        //   {
-        //     type: "button",
-        //     text: "Signup",
-        //     path: "./signup",
-        //     class: "button-red"
-        //   },
-        //   {
-        //     type: "button",
-        //     text: "Login",
-        //     path: "./login",
-        //     iconRight:
-        //       '<svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"> <path d="M22 6 L30 16 22 26 M30 16 L2 16" /> </svg>'
-        //   }
-        // ]
       },
       username: "admin",
       password: "passwd",
@@ -225,7 +210,6 @@ export default {
   height: 100%;
   width: 100%;
 
-  // ONLY FOR VUE NAVIGATION BAR
   #vue-navigation-bar {
     margin-left:10px;
 

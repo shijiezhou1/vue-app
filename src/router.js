@@ -6,96 +6,98 @@ Vue.use(Router);
 const jsUcfirst = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 const loadRouter = (name) => () => import(`@/views/${jsUcfirst(name)}.vue`);
 
-export default new Router({
-  routes: [
-    {
-      path: '*',
-      name: '404',
-      component: loadRouter('Notfound'),
-      props: (route) => {
-        return { resource: route.path, title: '404 Not Found | 🤣' }
-      }
-    },
-    {
-      path: '/',
-      name: 'home',
-      component: loadRouter('home'),
-      props: (route) => { return { title: 'Home | 🏠' } }
-    },
-    {
-      path: '/article',
-      name: 'article',
-      component: loadRouter('article'),
-      // props: (route) => { return { title: 'Article | 🙂' } }
-      props: true
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: loadRouter('about'),
-      props: (route) => { return { title: 'About | 🌞' } }
-    },
-    {
-      path: '/expedition',
-      name: 'expedition',
-      component: loadRouter('expedition'),
-      props: (route) => { return { title: 'Expedition | 🔥' } }
-    },
-    {
-      path: '/cv',
-      name: 'cv',
-      component: loadRouter('cv'),
-      props: (route) => { return { title: 'CV | ✉️' } }
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: loadRouter('contact'),
-      props: (route) => { return { title: 'Contact | 📞' } }
-    },
-    {
-      path: '/consociation',
-      name: 'consociation',
-      component: loadRouter('consociation'),
-      props: (route) => { return { title: 'Consociation | 🌿' } }
-    },
-    {
-      path: '/blog',
-      name: 'blog',
-      component: loadRouter('blog'),
-      props: (route) => { return { title: 'Blog | 📊' } }
-    },
-    {
-      path: '/collection',
-      name: 'colelction',
-      component: loadRouter('collection'),
-      props: ( route ) => {
-        return { title: 'Colelction | 👌🏻' }
-      }
-    },
-    {
-      path: '/exclusive',
-      name: 'exclusive',
-      component: loadRouter('exclusive'),
-      props: ( route ) => {
-        return { title: 'Exclusive | 🙂' }
-      }
-    },
-    {
-      path: '/podcast',
-      name: 'podcast',
-      component: loadRouter('podcast'),
-      props: ( route ) => {
-        return { title: 'Podcast | 🌞' }
-      }
-    },
-    {
-      path: '/book',
-      name: 'book',
-      component: loadRouter('book'),
-      props: ( route ) => {
-        return { title: 'Book | 🏵' }
-      }
-    },
-  ]
-})
+const routes = [
+  {
+    path: '*',
+    name: '404',
+    component: loadRouter('Notfound'),
+    meta: { title: '404 Not Found | 🤣' },
+    props: (route) => {
+      return { resource: route.path }
+    }
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: loadRouter('home'),
+    meta: { title: 'SHIJIE ZHOU | PORTFOLIO' },
+  },
+  {
+    path: '/article',
+    name: 'article',
+    component: loadRouter('article'),
+    props: true,
+    meta: { title: 'Article | 🙂' },
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: loadRouter('about'),
+    meta: { title: 'About | 🌞' },
+  },
+  {
+    path: '/expedition',
+    name: 'expedition',
+    component: loadRouter('expedition'),
+    meta: { title: 'Expedition | 🔥' },
+  },
+  {
+    path: '/cv',
+    name: 'cv',
+    component: loadRouter('cv'),
+    meta: { title: 'CV | ✉️' },
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: loadRouter('contact'),
+    meta: { title: 'Contact | 📞' }
+  },
+  {
+    path: '/consociation',
+    name: 'consociation',
+    component: loadRouter('consociation'),
+    meta: { title: 'Consociation | 🌿' },
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: loadRouter('blog'),
+    meta: { title: 'Blog | 📊' },
+  },
+  {
+    path: '/collection',
+    name: 'colelction',
+    component: loadRouter('collection'),
+    meta: { title: 'Colelction | 👌🏻' }
+  },
+  {
+    path: '/exclusive',
+    name: 'exclusive',
+    component: loadRouter('exclusive'),
+    meta: { title: 'Exclusive | 🙂' }
+  },
+  {
+    path: '/podcast',
+    name: 'podcast',
+    component: loadRouter('podcast'),
+    meta: { title: 'Podcast | 🌞' }
+  },
+  {
+    path: '/book',
+    name: 'book',
+    component: loadRouter('book'),
+    meta: { title: 'Book | 🏵' }
+  },
+]
+
+const router = new Router({
+  routes,
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title ? to.meta.title : 'SHIJIE ZHOU | PORTFOLIO'
+  next();
+});
+
+export default router;

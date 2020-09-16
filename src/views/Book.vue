@@ -52,6 +52,7 @@ import { mapGetters, mapActions, mapState } from "vuex";
     mounted() {
     if(this.$store.getters.allBooks.length === 0 ) {
       this.fetchBooks();
+      this.fetchPosts();
     }
   },
     computed: {
@@ -60,7 +61,7 @@ import { mapGetters, mapActions, mapState } from "vuex";
       })
     },
     methods: {
-      ...mapActions(['fetchBooks'])
+      ...mapActions(['fetchBooks', 'fetchPosts'])
     },
   };
 </script>
