@@ -12,22 +12,18 @@
             <p>{{ profileDescription }}</p>
             <div class="calendar">Loading the data just for you.</div>
         </div>
-        <!-- <h2>{{title}}</h2> -->
-        <!-- <button @click="reset">Reset</button> -->
-        <!-- <AboutCard v-on:titleChanged="updateTitle" ref="comA"></AboutCard> -->
     </div>
 </template>
 
 <script>
 import BlockQuoteContent from '../components/BlockQuoteContent.vue';
 import GitHubCalendar from 'github-calendar';
-import AboutCard from "../components/AboutCard.vue"
 
 export default {
     props: {
       title: null
     },
-    components: { BlockQuoteContent, AboutCard },
+    components: { BlockQuoteContent },
     data: () => ({
         profileImage: require('@/assets/profile/profile.jpg'),
         profileDescription: `Shijie Zhou studies at University of California, San Diego in the Interdisciplinary Computer in Arts. He is also the member for design and construct web developer at the Worldview project organization. Currently, he is working in Akirix(MMSG department) with software engineer.

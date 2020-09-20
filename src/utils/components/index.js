@@ -8,3 +8,12 @@ Vue.component('button-counter', {
   },
   template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 })
+
+
+Vue.component("async-component", (resolve, reject) => {
+  setTimeout(() => {
+    resolve({
+      template: "<div>Async component ...</div>"
+    });
+  }, 1000);
+});

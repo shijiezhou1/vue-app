@@ -12,8 +12,6 @@
           :href="item.url"
           target="_blank"
         >
-          <!--          :src="require('@/assets' + item.img)"-->
-          <!--          :lazy-src="require('@/assets' + item.img)"-->
           <v-img
             :src="item.img"
             :lazy-src="item.img"

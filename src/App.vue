@@ -9,39 +9,6 @@
         ></vue-navigation-bar>
       </div>
       <router-view />
-      <!-- <div v-show="jwt !== null">
-      <p>Returned JWT: {{jwt}}</p>
-      <p>
-        <a @click="logOut" href="#">Log Out</a>
-      </p>
-    </div>
-
-    <form class="form-signin" @submit.prevent="login" v-show="jwt == null">
-      <label for="inputUsername">Username</label>
-      &nbsp;
-      <input
-        v-model="username"
-        type="text"
-        id="inputUsername"
-        placeholder="Username"
-        required
-        autofocus
-      />
-      <br />
-      <br />
-      <label for="inputPassword">Password</label>
-      &nbsp;
-      <input
-        v-model="password"
-        type="password"
-        id="inputPassword"
-        placeholder="Password"
-        required
-      />
-      <p>
-        <input type="submit" value="Sign In" />
-      </p>
-    </form> -->
     </div>
     <Footer />
   </v-app>
@@ -71,31 +38,31 @@ export default {
         tooltipAnimationType: 'shift-away',
         menuOptionsRight: [
           {
-              type: 'link',
-              text: 'Projects',
-              subMenuOptions: [
-                  {
-                      type: 'link',
-                      text: 'Expedition',
-                      path: './expedition',
-                      iconLeft: '<i class="fa fa-user fa-fw"></i>'
-                  },
-                  {
-                      type: 'link',
-                      text: 'Collection',
-                      path: './collection',
-                      iconLeft: '<i class="fa fa-star fa-fw"></i>'
-                  },
-                  {
-                      type: 'hr'
-                  },
-                  {
-                      type: 'link',
-                      text: 'Exclusive',
-                      path: './exclusive',
-                      iconLeft: '<i class="fas fa-air-freshener" aria-hidden="true"></i>'
-                  }
-              ]
+            type: 'link',
+            text: 'Projects',
+            subMenuOptions: [
+              {
+                type: 'link',
+                text: 'Expedition',
+                path: './expedition',
+                iconLeft: '<i class="fa fa-user fa-fw"></i>'
+              },
+              {
+                type: 'link',
+                text: 'Collection',
+                path: './collection',
+                iconLeft: '<i class="fa fa-star fa-fw"></i>'
+              },
+              {
+                type: 'hr'
+              },
+              {
+                type: 'link',
+                text: 'Exclusive',
+                path: './exclusive',
+                iconLeft: '<i class="fas fa-air-freshener" aria-hidden="true"></i>'
+              }
+            ]
           },
           {
             type: 'link',
@@ -166,36 +133,35 @@ export default {
     logOut() {
       this.jwt = null;
       this.$toasted.global
-        .appSuccess( {
+        .appSuccess({
           message: "Locally Logged Out!"
-        } )
-        .goAway( 1200 );
+        })
+        .goAway(1200);
     },
 
     login() {
-      if ( this.$socket.disconnected ) {
+      if (this.$socket.disconnected) {
         this.$toasted.global
-          .appError( {
+          .appError({
             message: "You are not connected to the server!"
-          } )
-          .goAway( 1200 );
+          })
+          .goAway(1200);
       } else {
-        this.$socket.emit( "authenticate", {
-          data: JSON.stringify( {
+        this.$socket.emit("authenticate", {
+          data: JSON.stringify({
             username: this.username,
             password: this.password
-          } )
-        } );
+          })
+        });
       }
     },
-    vnbItemClicked( text ) {
-      if ( text === 'About' ) {
-        // alert("'About' was selected.");
+    vnbItemClicked(text) {
+      if (text === 'About') {
       }
     }
   },
   sockets: {
-    auth: function ( response ) {
+    auth: function (response) {
       this.jwt = response.jwt;
     }
   }
@@ -211,7 +177,7 @@ export default {
   width: 100%;
 
   #vue-navigation-bar {
-    margin-left:10px;
+    margin-left: 10px;
 
     div {
       > .vnb__popup__bottom ul li a {
@@ -272,10 +238,10 @@ div .main-navbar-section {
     }
   }
   &__popup {
-    &__top{
-      &__close-button{
-        &__image{
-          max-height: 30px!important;
+    &__top {
+      &__close-button {
+        &__image {
+          max-height: 30px !important;
           width: 30px;
         }
       }
