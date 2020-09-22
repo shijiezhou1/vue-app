@@ -53,7 +53,6 @@ export default new Vuex.Store({
   },
   actions: {
     "SOCKET_oops"(state, server) {
-      console.log('A')
       Vue.toasted.global.appError({
         message: server.message
       }).goAway(1200);
