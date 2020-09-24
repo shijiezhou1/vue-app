@@ -73,9 +73,9 @@ export default new Vuex.Store({
              @@@@@
             .......
       `)
-      Vue.toasted.global.appSuccess({
-        message: server.message
-      }).goAway(1200);
+      // Vue.toasted.global.appSuccess({
+      //   message: server.message
+      // }).goAway(1200);
     },
     "SOCKET_info"(state, server) {
       console.log('C')
