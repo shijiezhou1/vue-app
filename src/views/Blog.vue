@@ -46,7 +46,6 @@ export default {
     ...mapState({
       mediumList: state => state.mediums.mediums
     }),
-    // ...mapGetters(["allMedium"])
   },
   methods: {
       ...mapActions(['fetchMediums'])
