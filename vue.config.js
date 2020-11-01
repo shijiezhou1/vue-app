@@ -11,6 +11,9 @@ module.exports = {
       exclude: [/\.map$/, /_redirects/, /CNAME(.*)/],
     }
   },
+
+  productionSourceMap: false, // Remove map in production mode
+
   filenameHashing: true,
   outputDir: 'dist',
   // publicPath: process.env.NODE_ENV === 'production'
