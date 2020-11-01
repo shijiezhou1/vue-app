@@ -12,7 +12,7 @@ module.exports = {
     }
   },
 
-  productionSourceMap: false, // Remove map in production mode
+  productionSourceMap: false, // Remove map in production
 
   filenameHashing: true,
   outputDir: 'dist',
