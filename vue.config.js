@@ -1,5 +1,6 @@
 
 const path = require('path');
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
   runtimeCompiler: true, // When you have components import from vue
@@ -58,7 +59,15 @@ module.exports = {
       },
     },
     plugins: [
-
+      new ImageminPlugin({
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        optipng: {
+          optimizationLevel: 9
+        },
+        svgo: {
+          datauri: 'base64',
+        },
+      })
     ]
   },
 }

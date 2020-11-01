@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "build:prod": "vue-cli-service build --mode production",
     "start": "vue-cli-service serve",
-    "clean":"rm -rf node_modules yarn.lock package-lock.json",
+    "clean": "rm -rf node_modules yarn.lock package-lock.json",
     "test": "echo 'test'"
   },
   "dependencies": {
@@ -38,6 +38,8 @@
     "@vue/cli-service": "^4.3.1",
     "deepmerge": "^4.2.2",
     "fibers": "^5.0.0",
+    "image-webpack-loader": "^7.0.1",
+    "imagemin-webpack-plugin": "^2.4.2",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
     "sass": "^1.26.7",
