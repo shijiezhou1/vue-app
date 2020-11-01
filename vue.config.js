@@ -2,7 +2,6 @@
 const path = require('path');
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-const smp = new SpeedMeasurePlugin();
 
 module.exports = {
   runtimeCompiler: true, // When you have components import from vue
@@ -62,6 +61,7 @@ module.exports = {
     },
     plugins: [
       new ImageminPlugin({
+        disable: process.env.NODE_ENV !== 'production', // Disable during development
         test: /\.(jpe?g|png|gif|svg)$/i,
         optipng: {
           optimizationLevel: 9
