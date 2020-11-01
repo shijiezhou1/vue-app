@@ -1,6 +1,8 @@
 
 const path = require('path');
 const ImageminPlugin = require('imagemin-webpack-plugin').default
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
 
 module.exports = {
   runtimeCompiler: true, // When you have components import from vue
@@ -67,7 +69,8 @@ module.exports = {
         svgo: {
           datauri: 'base64',
         },
-      })
+      }),
+      new SpeedMeasurePlugin()
     ]
   },
 }
