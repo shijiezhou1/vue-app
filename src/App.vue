@@ -1,6 +1,8 @@
 <template>
   <v-app>
-    <div id="app">
+    <div
+      id="app"
+    >
       <div class="main-navbar-section">
         <vue-navigation-bar
           id="vue-navigation-bar"
@@ -37,6 +39,10 @@ export default {
         ariaLabelMainNav: 'Main Navigation',
         tooltipAnimationType: 'shift-away',
         menuOptionsRight: [
+          {
+            type: 'link',
+            text: 'O',
+          },
           {
             type: 'link',
             text: 'Projects',
@@ -126,8 +132,12 @@ export default {
       username: "admin",
       password: "passwd",
       jwt: null,
-
+      theme: '',
     };
+  },
+  mounted() {
+    let localTheme = localStorage.getItem('theme'); //gets stored theme value if any
+    document.documentElement.setAttribute('data-theme', localTheme); // updates the data-theme attribute
   },
   methods: {
     logOut() {
@@ -156,7 +166,10 @@ export default {
       }
     },
     vnbItemClicked(text) {
-      if (text === 'About') {
+      if (text === 'O') {
+        this.theme = this.theme == 'darkMode' ? '' : 'darkMode'; //toggles theme value
+        document.documentElement.setAttribute('data-theme', this.theme); // sets the data-theme attribute
+        localStorage.setItem('theme', this.theme); // stores theme value on local storage
       }
     }
   },
@@ -164,17 +177,20 @@ export default {
     auth: function (response) {
       this.jwt = response.jwt;
     }
-  }
+  },
 };
 </script>
 
 <style lang="scss">
+@import "./styles/index.scss";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700");
 
 #app {
   height: 100%;
   width: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
 
   #vue-navigation-bar {
     margin-left: 10px;
