@@ -40,7 +40,7 @@ module.exports = {
 
   crossorigin: undefined,
 
-  // PROXY
+  // PROXY SETUP
   devServer: {
     disableHostCheck: true,
     port: 8080,
