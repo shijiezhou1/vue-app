@@ -57,6 +57,10 @@ module.exports = {
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
+        "@assets": path.resolve(__dirname, "src/assets"),
+        "@components": path.resolve(__dirname, "src/components"),
+        "@router": path.resolve(__dirname, "src/router"),
+        "@views": path.resolve(__dirname, "src/views"),
       },
     },
     plugins: [
@@ -73,4 +77,6 @@ module.exports = {
       new SpeedMeasurePlugin()
     ]
   },
+  // Parallel build
+  parallel: require('os').cpus().length > 1
 }
