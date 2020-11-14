@@ -2,6 +2,7 @@
 const path = require('path');
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   runtimeCompiler: true, // When you have components import from vue
@@ -74,9 +75,26 @@ module.exports = {
           datauri: 'base64',
         },
       }),
-      new SpeedMeasurePlugin()
-    ]
+      new SpeedMeasurePlugin(),
+      new CompressionWebpackPlugin({
+        test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
+        filename: '[path][base].gz',
+        algorithm: 'gzip',
+        threshold: 10240,
+        minRatio: 0.8,
+        deleteOriginalAssets: false,
+      }),
+    ],
   },
   // Parallel build
-  parallel: require('os').cpus().length > 1
+  parallel: require('os').cpus().length > 1,
+
+  css: {
+    loaderOptions: {
+      // sass-loader configurations
+      sass: {
+        additionalData: `@import "~@/styles/variables.scss";`
+      }
+    }
+  }
 }
