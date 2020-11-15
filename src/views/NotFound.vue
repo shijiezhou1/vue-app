@@ -24,7 +24,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-color);
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {

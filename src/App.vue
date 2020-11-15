@@ -138,6 +138,7 @@ export default {
   mounted() {
     let localTheme = localStorage.getItem('theme'); //gets stored theme value if any
     document.documentElement.setAttribute('data-theme', localTheme); // updates the data-theme attribute
+    this.$vuetify.theme.dark = localTheme == 'darkMode' ? true : false;
   },
   methods: {
     logOut() {
@@ -169,6 +170,7 @@ export default {
       if (text === 'O') {
         this.theme = this.theme == 'darkMode' ? '' : 'darkMode'; //toggles theme value
         document.documentElement.setAttribute('data-theme', this.theme); // sets the data-theme attribute
+        this.$vuetify.theme.dark = this.theme == 'darkMode' ? true : false;
         localStorage.setItem('theme', this.theme); // stores theme value on local storage
       }
     }
