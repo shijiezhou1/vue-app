@@ -71,11 +71,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  .socialMedia {
-  }
-
-  .social-media {
-
-  }
-</style>
+<style lang="scss"></style>
