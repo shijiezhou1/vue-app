@@ -11,7 +11,7 @@
     "test": "echo 'test'"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.0",
     "babel-runtime": "^6.26.0",
     "core-js": "^3.6.5",
     "github-calendar": "^2.1.1",
