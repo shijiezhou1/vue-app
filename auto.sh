@@ -1,3 +1,3 @@
 git add .
-git commit -m "Update file"
+git commit -m "Update file %FORMAT"
 git push
