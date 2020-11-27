@@ -1,3 +1,4 @@
 git add .
-git commit -m "Update file %FORMAT"
+CURRENT_DATE=$(date +"%m-%d-%Y %H:%m:%S")
+git commit -m 'Update file "$CURRENT_DATE"'
 git push
