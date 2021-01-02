@@ -48,7 +48,6 @@ export default {
         })
         .goAway(1200);
     },
-
     login() {
       if (this.$socket.disconnected) {
         this.$toasted.global
